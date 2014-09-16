@@ -1,4 +1,4 @@
-# Beer Finder #
+# Project Name #
 
 <!-- 
 > This material was originally posted [here](http://www.quora.com/What-is-Amazons-approach-to-product-development-and-product-management). It is reproduced here for posterities sake.
@@ -17,13 +17,13 @@ Once the project moves into development, the press release can be used as a touc
  -->
  
 ## Heading ##
-  > Name the product in a way the reader (i.e. your target customers) will understand.
+  > Beer Advisor
 
 ## Sub-Heading ##
-  > Describe who the market for the product is and what benefit they get. One sentence only underneath the title.
+  > Customized beer recommendations for beer enthusiasts.
 
 ## Summary ##
-  > Give a summary of the product and the benefit. Assume the reader will not read anything else so make this paragraph good.
+  > Beer Advisor identifies your personal tastes so that it can make accurate and personalized beer recommendations for beers located near you. 
 
 ## Problem ##
   > Describe the problem your product solves.
