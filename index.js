@@ -18,7 +18,22 @@ app.use(bodyParser());
 //anything in /public can now be accessed by name. 
 app.use(express.static(path.join(__dirname, 'public')));  
 
+var beerget = function(path) {
+  //deleted the url and key to push to github since it's a public repo.
+  var beerDBurl = ''
+  var key = ''
+  var requestUrl = beerDBurl + path + '/?key=' + key
+
+  http.get(requestUrl, function(res) {
+    console.log(res);
+  }).on('error', function(e) {
+    console.log('There was an error: ' + e.message);
+  })
+};
+      
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Server listening on port ' + app.get('port'));
 });
+
+// beerget(); 
