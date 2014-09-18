@@ -11,28 +11,105 @@ app.listen(port, url);
 
 console.log('Listening on', url, ':', port);
 
-//
+// This gets called by beerget() when we initially create our neo4j database
+// It takes an object with properties that specify a specific beer
 var insertIntoDB = function(beerObj){
-  console.log('inside insertIntoDB()')
+  // If the beer object comes with a picture, use it, otherwise we will use a
+  // default image later
   if(beerObj.labels){
     var pic = beerObj.labels.large;
   }
+  // Defining a params object allows us to use it for templating when we write
+  // our neo4j query
   var params = {
-    //fix these properties
     Name: beerObj.name,
     IBU: beerObj.ibu || 'undefined',
     ABV: beerObj.abv || 'undefined',
     Description: beerObj.description || 'undefined',
     Imgurl: pic||'http://darrylscouch.com/wp-content/uploads/2013/05/Mystery_Beer.png',
   }
+  // Within ({}) we have access to param's properties
   db.query('CREATE (n:Beer {Name: ({Name}), IBU: ({IBU}), ABV: ({ABV}), Description: ({Description}), Imgurl: ({Imgurl}) })', params, function(err){
     if(err){ console.log(err); } else {
       console.log('successfully created beer node')
     }
   })
 }
+// beerget('/beers');
+
+////////////////////////////////////////////////////////////////////////
+// Don't uncomment the above beerget invocation unless you want to 
+// re-create the entire database.
+//
+// Beerget is only called when we want to fill our database with new beers.
+// We have already called it once and filled our database with all of brewDB's
+// beer information, so we do not have to call beerget ever again, unless we need to re-do
+// our database or implement updates later.
+var beerget = function(path) {
+
+  // Define the pieces that will constitute our get request url
+  var beerDBurl = 'http://api.brewerydb.com/v2/'//delete this before publicizing on github
+  var key = '7cce543c5ae17da2dba68c674c198d2d' //delete this before publicizing on github
+  var requestUrl;
+  var page;
+  // Counter is only here so we can keep track of our queries via console logs
+  // It is not part of the program's functionality
+  var counter = 0;
+
+  // BrewDB requests only return 1 page at a time, and there are 650 pages,
+  // so we have to send a get request for every page, one at a time
+  for(var i=1;i<650;i++){
+
+    // Using IIFE in order to have console.log transparency while get
+    // requests are being made. this is not necessary for the program's
+    // functionality, it just helps console logs be clearer in case you want
+    // to console log the pages as they get added to the db
+    (function(x){
+      // i gets passed in to IIFE, thus page gets set to i
+      page = x;
+      // Insert the current page number into the request url
+      requestUrl = beerDBurl + path + '/?p='+page+'&key=' + key;
+      // Send get request to brewDB, the request Url looks something like this: 
+      // http://api.brewerydb.com/v2/beers/?p=1&key=7cce543c5ae17da2dba68c674c198d2d
+      http.get(requestUrl, function(res){
+        var str = '';
+        // Collect res data in str as a JSON object
+        res.on('data', function (chunk) {
+           str += chunk;
+        });
+        // Once all beer data from the page has been receied, parse it and
+        // insert each beer on the page into our neo4j database
+        res.on('end', function () {
+          // counter keeps track of how many pages we've finished uploading
+          // so that we'll know when counter = 650, we are completely done.
+           counter++;
+           console.log(counter)
+           // The data from brewDB API comes inside the 'data' property of a larger
+           // object. So we parse str, and then grab the data property.
+           var beers = JSON.parse(str).data
+           // Beers is now an array of objects, and each object represents one beer.
+           // So we iterate over every beer, and call insertIntoDB(beer) in order
+           // to add each beer to our database
+           for(var k=0;k<beers.length;k++){
+            insertIntoDB(beers[k]);
+           }
+           // When counter reaches 650, we know we've finished
+           if(counter===650){
+             console.log('final page');
+           }
+        });
+      });
+    })(i)
+
+  }
+};
 
 
+
+
+// Example of what beer data looks like when it comes from brewDB API.
+// These objects are contained within an array that belongs to a 'data'
+// property of the JSON response object when you send a get request to /beers
 // { id: 'SqP18Z',
 //        name: '(512) Cascabel Cream Stout',
 //        description: 'Our cream stout, is an indulgent beer brewed with generous amounts of  English chocolate and roasted malts, as well as the traditional addition of lactose. Our stout, however, parted ways with tradition when we added over 20 pounds of Cascabel peppers to the beer.  Cascabel peppers, also called Guajillo, are characterized by their earthy character and deep, smooth spiciness. The peppers were de-stemmed by hand and added to the beer post-fermentation to achieve their most potent flavor potential. They add hints of raisins and berries to the beer, as well as a subtle tingling spiciness that washes away with each gulp.',
@@ -68,43 +145,3 @@ var insertIntoDB = function(beerObj){
 //        available: [Object],
 //        style: [Object] 
 // },
-
-var beerget = function(path) {
-  //deleted the url and key to push to github since it's a public repo.
-  var beerDBurl = 'http://api.brewerydb.com/v2/'
-  var key = '7cce543c5ae17da2dba68c674c198d2d'
-  // var requestUrl = beerDBurl + path + '/?p='+page+'&key=' + key
-  var requestUrl;
-  var page;
-  var counter = 0;
-
-  for(var i=1;i<50;i++){
-    (function(x){
-      page = x;
-      requestUrl = beerDBurl + path + '/?p='+page+'&key=' + key;
-      http.get(requestUrl, function(res){
-        var str = '';
-        res.on('data', function (chunk) {
-           str += chunk;
-        });
-        res.on('end', function () {
-           counter++;
-           console.log(counter)
-           console.log(JSON.parse(str))
-           var beers = JSON.parse(str).data
-           for(var k=0;k<beers.length;k++){
-            insertIntoDB(beers[k]);
-           }
-           //Need to implement addToDatabase function
-           //addToDatabase(JSON.parse(str))
-           if(counter===650){
-             console.log('final page');
-           }
-        });
-      });
-    })(i)
-  }
-      // console.log('heres your data: ',response);
-};
-      
-beerget('/beers'); 
