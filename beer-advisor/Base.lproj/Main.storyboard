@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="ahL-rY-gm1">
+
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
     </dependencies>
@@ -7,7 +8,8 @@
         <!--Rate your beers!-->
         <scene sceneID="kv2-9H-tGl">
             <objects>
-                <viewController id="YdU-KC-Znb" sceneMemberID="viewController">
+
+                <viewController id="9pv-A4-QxB" customClass="FirstViewController" customModule="beer_advisor" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Qh5-kh-3tB"/>
                         <viewControllerLayoutGuide type="bottom" id="rvK-w5-S6N"/>
@@ -69,7 +71,8 @@
         <!--Item 2-->
         <scene sceneID="D9X-jv-b2m">
             <objects>
-                <viewController id="JlT-7f-SV3" sceneMemberID="viewController">
+
+                <viewController id="8rJ-Kc-sve" customClass="SecondViewController" customModule="beer_advisor" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="cPz-Fg-pHL"/>
                         <viewControllerLayoutGuide type="bottom" id="TYR-BI-4T8"/>
@@ -83,7 +86,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lVL-Uf-Tiz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1910" y="717"/>
+
+
+            <point key="canvasLocation" x="750" y="336"/>
         </scene>
         <!--Item-->
         <scene sceneID="brB-ty-lQn">
