@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B51E38D719CB6400003CA615 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51E38D619CB6400003CA615 /* ThirdViewController.swift */; };
 		B55AAE2C19C8F36D0009ED2F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55AAE2B19C8F36D0009ED2F /* AppDelegate.swift */; };
 		B55AAE2E19C8F36D0009ED2F /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55AAE2D19C8F36D0009ED2F /* FirstViewController.swift */; };
 		B55AAE3019C8F36D0009ED2F /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55AAE2F19C8F36D0009ED2F /* SecondViewController.swift */; };
@@ -27,6 +28,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B51E38D619CB6400003CA615 /* ThirdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
 		B55AAE2619C8F36D0009ED2F /* beer-advisor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "beer-advisor.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B55AAE2A19C8F36D0009ED2F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B55AAE2B19C8F36D0009ED2F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -81,6 +83,7 @@
 			children = (
 				B55AAE2B19C8F36D0009ED2F /* AppDelegate.swift */,
 				B55AAE2D19C8F36D0009ED2F /* FirstViewController.swift */,
+				B51E38D619CB6400003CA615 /* ThirdViewController.swift */,
 				B55AAE2F19C8F36D0009ED2F /* SecondViewController.swift */,
 				B55AAE3119C8F36D0009ED2F /* Main.storyboard */,
 				B55AAE3419C8F36D0009ED2F /* Images.xcassets */,
@@ -217,6 +220,7 @@
 			files = (
 				B55AAE3019C8F36D0009ED2F /* SecondViewController.swift in Sources */,
 				B55AAE2C19C8F36D0009ED2F /* AppDelegate.swift in Sources */,
+				B51E38D719CB6400003CA615 /* ThirdViewController.swift in Sources */,
 				B55AAE2E19C8F36D0009ED2F /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -409,6 +413,7 @@
 				B55AAE4919C8F36D0009ED2F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B55AAE4A19C8F36D0009ED2F /* Build configuration list for PBXNativeTarget "beer-advisorTests" */ = {
 			isa = XCConfigurationList;
@@ -417,6 +422,7 @@
 				B55AAE4C19C8F36D0009ED2F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
