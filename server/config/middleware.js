@@ -11,8 +11,5 @@ module.exports = function(app,express){
 	app.use(bodyParser.urlencoded({extended: true}));
 	// app.use(express.static(__dirname + '/../../client'));
 
-	// Define which routers are assigned to each route.
-	app.get('/', function (req, res) {
-	  res.send('<html><body><h1>Hello World</h1></body></html>');
-	});
+
 }
