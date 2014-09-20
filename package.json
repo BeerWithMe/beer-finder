@@ -1,25 +1,13 @@
 {
-  "name": "beer-finder",
+  "name": "index",
+  "private": true,
   "version": "0.0.0",
-  "description": "",
-  "main": "index.js",
   "dependencies": {
-    "body-parser": "^1.8.2",
-    "express": "^4.9.1",
-    "neo4j": "^1.1.0"
+      "chai": "~1.8.0",
+      "mocha": "^1.21.4",
+      "request": "^2.34.0"
   },
-  "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/BeerWithMe/beer-finder.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/BeerWithMe/beer-finder/issues"
-  },
-  "homepage": "https://github.com/BeerWithMe/beer-finder"
+  	"test": "mocha spec"
+  }
 }

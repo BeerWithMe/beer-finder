@@ -4,7 +4,10 @@ module.exports = function(app) {
 
   // Define which routers are assigned to each route.
   app.get('/', function (req, res) {
+    console.log('request received');
     res.send('<html><body><h1>Hello World</h1></body></html>');
+    // console.log('response: ',res)
+    // res.end('<html><body><h1>Hello World</h1></body></html>');
   });
 
   app.get('/questionnaire', function (req, res) {
