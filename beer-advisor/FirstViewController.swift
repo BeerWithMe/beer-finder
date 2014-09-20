@@ -34,67 +34,42 @@ class FirstViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        // Do any additional setup after loading the view, typically from a nib.
-//        
-//        let baseURL = NSURL(string: "localhost:3000/")
-//        let sharedSession = NSURLSession.sharedSession()
-//        
-        
-        
-        
-//        let downloadTask: NSURLSessionDownloadTask = sharedSession.downloadTaskWithURL(baseURL, completionHandler: { (location: NSURL!, response: NSURLResponse!, error: NSError!) -> Void in
-//            
-//            if error == nil {
-//                let dataObject = NSData(contentsOfURL: location)
-//                let testDictionary: NSDictionary = NSJSONSerialization.JSONObjectWithData(dataObject, options: nil, error: nil) as NSDictionary
-//                let testBeerData = BeerData(testDictionary: testDictionary)
-//                println(testBeerData)
-//                println("Hi guys!")
-//
-//            }
-//        })
-//        downloadTask.resume()
-        
-        
-        
-        
         let url = NSURL(string: "http://localhost:3000/questionnaire")
         
         let sharedSession = NSURLSession.sharedSession() //This sets up an asynchronous environment??
         let downloadTask: NSURLSessionDownloadTask = sharedSession.downloadTaskWithURL(url, completionHandler: { (location: NSURL!, response: NSURLResponse!, error: NSError!) -> Void in
             
             if error == nil {
-                println(response)
-                println(location)
-                println(error)
-                let dataObject = NSData(contentsOfURL: location)
-                println(dataObject)
-                let weatherDictionary: NSArray = NSJSONSerialization.JSONObjectWithData(dataObject, options: nil, error: nil) as NSArray
+                let dataObject = NSData(contentsOfURL: location) //This gets the data from the url as a huge list of packets.
+                let beerQuestionnaireData: NSArray = NSJSONSerialization.JSONObjectWithData(dataObject, options: nil, error: nil) as NSArray
+                //This transforms the list of packets into a usable array of JS-like objects.
+                var url1: AnyObject = beerQuestionnaireData[0]["imgUrl"]!!//Apparently there are two layers of "optionals"
+                let imgUrl = NSURL.URLWithString("\(url1)")
+                var err: NSError?
+                var imageData: NSData = NSData.dataWithContentsOfURL(imgUrl, options: NSDataReadingOptions.DataReadingMappedIfSafe, error: &err)
+                self.questionnaireImage.image = UIImage(data: imageData)
                 
-                println(weatherDictionary)
             }
-            
         })
         downloadTask.resume()
 
                     //let returnData = NSData(contentsOfURL: url, encoding: NSUTF8StringEncoding)
                     
-
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
                     
 //            let url = NSURL.URLWithString("\(returnData.imageURL)")
 //            var err: NSError?
@@ -104,16 +79,7 @@ class FirstViewController: UIViewController {
         
        // task.resume()
         
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
+ 
         
 //        let url = NSURL.URLWithString("");
 //        var err: NSError?

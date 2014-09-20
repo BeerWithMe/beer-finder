@@ -10,13 +10,59 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "beer-advisor/FirstViewController.swift"
-            timestampString = "432873184.246675"
+            timestampString = "432874492.027569"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "78"
-            endingLineNumber = "78"
+            startingLineNumber = "54"
+            endingLineNumber = "54"
             landmarkName = "viewDidLoad()"
             landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "beer-advisor/FirstViewController.swift"
+            timestampString = "432874220.732497"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "46"
+            endingLineNumber = "46"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "beer_advisor.FirstViewController.(viewDidLoad (beer_advisor.FirstViewController) -&gt; () -&gt; ()).(closure #1)"
+                  moduleName = "beer-advisor"
+                  urlString = "file:///Users/Ben/Desktop/HackReactor/thesis-project/beer-finder/beer-advisor/FirstViewController.swift"
+                  timestampString = "432874220.758178"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "46"
+                  endingLineNumber = "46"
+                  offsetFromSymbolStart = "815">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "reabstraction thunk helper from @callee_owned (@unowned ObjectiveC.NSCopying) -&gt; (@autoreleased Swift.Optional&lt;Swift.AnyObject&gt;) to @callee_owned (@owned ObjectiveC.NSCopying) -&gt; (@owned Swift.Optional&lt;Swift.AnyObject&gt;)"
+                  moduleName = "beer-advisor"
+                  urlString = "file:///Users/Ben/Desktop/HackReactor/thesis-project/beer-finder/beer-advisor/FirstViewController.swift"
+                  timestampString = "432874220.758506"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "46"
+                  endingLineNumber = "46"
+                  offsetFromSymbolStart = "4">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
