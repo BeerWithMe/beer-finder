@@ -15,6 +15,7 @@
 		B55AAE3519C8F36D0009ED2F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B55AAE3419C8F36D0009ED2F /* Images.xcassets */; };
 		B55AAE3819C8F36D0009ED2F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B55AAE3619C8F36D0009ED2F /* LaunchScreen.xib */; };
 		B55AAE4419C8F36D0009ED2F /* beer_advisorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55AAE4319C8F36D0009ED2F /* beer_advisorTests.swift */; };
+		B5BE5EE819CCF0280041DF11 /* BeerData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BE5EE719CCF0280041DF11 /* BeerData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		B55AAE3D19C8F36D0009ED2F /* beer-advisorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "beer-advisorTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B55AAE4219C8F36D0009ED2F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B55AAE4319C8F36D0009ED2F /* beer_advisorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = beer_advisorTests.swift; sourceTree = "<group>"; };
+		B5BE5EE719CCF0280041DF11 /* BeerData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeerData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 			children = (
 				B55AAE2B19C8F36D0009ED2F /* AppDelegate.swift */,
 				B55AAE2D19C8F36D0009ED2F /* FirstViewController.swift */,
+				B5BE5EE719CCF0280041DF11 /* BeerData.swift */,
 				B51E38D619CB6400003CA615 /* ThirdViewController.swift */,
 				B55AAE2F19C8F36D0009ED2F /* SecondViewController.swift */,
 				B55AAE3119C8F36D0009ED2F /* Main.storyboard */,
@@ -218,6 +221,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5BE5EE819CCF0280041DF11 /* BeerData.swift in Sources */,
 				B55AAE3019C8F36D0009ED2F /* SecondViewController.swift in Sources */,
 				B55AAE2C19C8F36D0009ED2F /* AppDelegate.swift in Sources */,
 				B51E38D719CB6400003CA615 /* ThirdViewController.swift in Sources */,

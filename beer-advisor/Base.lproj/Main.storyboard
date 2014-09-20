@@ -16,7 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Let us get to know you!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gfo-zX-G9s">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Let us get to know you." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gfo-zX-G9s">
                                 <rect key="frame" x="70" y="81" width="180" height="37"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -24,6 +24,9 @@
                             </label>
                             <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="qmV-dF-TPg">
                                 <rect key="frame" x="101" y="421" width="118" height="31"/>
+                                <connections>
+                                    <action selector="ratingslider:" destination="9pv-A4-QxB" eventType="valueChanged" id="hWv-WS-7PD"/>
+                                </connections>
                             </slider>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IMO-Rc-U8u">
                                 <rect key="frame" x="16" y="518" width="149" height="30"/>
@@ -31,12 +34,9 @@
                                 <state key="normal" title="I don't know this beer">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WAb-cN-Gop">
-                                <rect key="frame" x="111" y="459" width="98" height="30"/>
-                                <state key="normal" title="Submit Rating">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
+                                <connections>
+                                    <action selector="DontKnow:" destination="9pv-A4-QxB" eventType="touchUpInside" id="3YN-9U-vWx"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="How much do you like this beer?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cWA-Yx-ElB">
                                 <rect key="frame" x="34" y="126" width="252" height="21"/>
@@ -51,16 +51,29 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="bOU-wM-HX3" kind="push" id="FwI-5N-vhQ"/>
+                                    <action selector="RecommendationButton:" destination="9pv-A4-QxB" eventType="touchUpInside" id="nz6-Gf-AZu"/>
+                                    <segue destination="bOU-wM-HX3" kind="push" id="bI2-B3-Zuv"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5QP-mZ-EnU">
                                 <rect key="frame" x="58" y="164" width="204" height="249"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WAb-cN-Gop">
+                                <rect key="frame" x="111" y="459" width="98" height="30"/>
+                                <state key="normal" title="Submit Rating">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="submitratingbutton:" destination="9pv-A4-QxB" eventType="touchUpInside" id="S3C-pr-IPm"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Rate your beers!" id="kxi-88-TEI"/>
+                    <connections>
+                        <outlet property="questionnaireImage" destination="5QP-mZ-EnU" id="bSk-iY-FEo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o51-8t-dY5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
