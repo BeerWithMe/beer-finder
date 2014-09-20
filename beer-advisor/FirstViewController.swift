@@ -33,6 +33,7 @@ class FirstViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
 //        // Do any additional setup after loading the view, typically from a nib.
 //        
 //        let baseURL = NSURL(string: "localhost:3000/")
@@ -51,13 +52,63 @@ class FirstViewController: UIViewController {
 //        })
 //        downloadTask.resume()
         
-        let url = NSURL(string: "http://localhost:3000/")
         
-        let task = NSURLSession.sharedSession().dataTaskWithURL(url) {(data, response, error) in
-            println(NSString(data: data, encoding: NSUTF8StringEncoding))
+        
+        
+        
+        
+        
+        
+        
+        
+        let url = NSURL(string: "http://localhost:3000/questionnaire")
+        
+        let sharedSession = NSURLSession.sharedSession() //This sets up an asynchronous environment??
+        
+        
+            .dataTaskWithURL(url) //Makes a GET request to the specified URL
+                {(data, response, error) in
+            var returnData = NSString(data: data, encoding: NSUTF8StringEncoding)
+            println(returnData)
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+//            let url = NSURL.URLWithString("\(returnData.imageURL)")
+//            var err: NSError?
+//            var imageData :NSData = NSData.dataWithContentsOfURL(url, options: NSDataReadingOptions.DataReadingMappedIfSafe, error: &err)
+//            self.questionnaireImage.image = UIImage(data: imageData)
         }
         
         task.resume()
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+//        let url = NSURL.URLWithString("http://live-wallpaper.net/iphone/img/app/i/p/iphone-4s-wallpapers-mobile-backgrounds-dark_2466f886de3472ef1fa968033f1da3e1_raw_1087fae1932cec8837695934b7eb1250_raw.jpg");
+//        var err: NSError?
+//        var imageData :NSData = NSData.dataWithContentsOfURL(url,options: NSDataReadingOptions.DataReadingMappedIfSafe, error: &err)
+//        var bgImage = UIImage(data:imageData)
         
         }
 
