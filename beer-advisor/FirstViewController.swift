@@ -25,8 +25,13 @@ class FirstViewController: UIViewController {
         beerData.cycleImage()
     }
     
-    @IBAction func ratingslider(sender: AnyObject) {
-        println("You slid!")
+//    @IBAction func ratingslider(sender: AnyObject) {
+//        println("You slid!")
+//    }
+    
+    
+    @IBAction func ratingsPicker(sender: UISegmentedControl) {
+        println("You picked")
     }
     
     @IBOutlet weak var questionnaireImage: UIImageView!
