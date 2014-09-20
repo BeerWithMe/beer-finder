@@ -1,11 +1,9 @@
 // This file starts our server, we defer to localhost:3000
 // if a process port and url are not defined
 var app = require('./server/server.js');
-var db = require('./server/dbConfig.js');
+// var db = require('./server/dbConfig.js'); //only need for database update
 var port = process.env.PORT || 3000;
 var url = process.env.URL || 'localhost';
-var http = require('http');
-var fs = require('fs');
 
 app.listen(port, url);
 
