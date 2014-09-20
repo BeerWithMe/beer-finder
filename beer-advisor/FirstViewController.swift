@@ -39,6 +39,9 @@ class FirstViewController: UIViewController {
 //        let baseURL = NSURL(string: "localhost:3000/")
 //        let sharedSession = NSURLSession.sharedSession()
 //        
+        
+        
+        
 //        let downloadTask: NSURLSessionDownloadTask = sharedSession.downloadTaskWithURL(baseURL, completionHandler: { (location: NSURL!, response: NSURLResponse!, error: NSError!) -> Void in
 //            
 //            if error == nil {
@@ -55,21 +58,28 @@ class FirstViewController: UIViewController {
         
         
         
-        
-        
-        
-        
-        
-        
         let url = NSURL(string: "http://localhost:3000/questionnaire")
         
         let sharedSession = NSURLSession.sharedSession() //This sets up an asynchronous environment??
-        
-        
-            .dataTaskWithURL(url) //Makes a GET request to the specified URL
-                {(data, response, error) in
-            var returnData = NSString(data: data, encoding: NSUTF8StringEncoding)
-            println(returnData)
+        let downloadTask: NSURLSessionDownloadTask = sharedSession.downloadTaskWithURL(url, completionHandler: { (location: NSURL!, response: NSURLResponse!, error: NSError!) -> Void in
+            
+            if error == nil {
+                println(response)
+                println(location)
+                println(error)
+                let dataObject = NSData(contentsOfURL: location)
+                println(dataObject)
+                let weatherDictionary: NSArray = NSJSONSerialization.JSONObjectWithData(dataObject, options: nil, error: nil) as NSArray
+                
+                println(weatherDictionary)
+            }
+            
+        })
+        downloadTask.resume()
+
+                    //let returnData = NSData(contentsOfURL: url, encoding: NSUTF8StringEncoding)
+                    
+
                     
                     
                     
@@ -90,11 +100,9 @@ class FirstViewController: UIViewController {
 //            var err: NSError?
 //            var imageData :NSData = NSData.dataWithContentsOfURL(url, options: NSDataReadingOptions.DataReadingMappedIfSafe, error: &err)
 //            self.questionnaireImage.image = UIImage(data: imageData)
-        }
-        
-        task.resume()
         
         
+       // task.resume()
         
         
         
@@ -105,7 +113,9 @@ class FirstViewController: UIViewController {
         
         
         
-//        let url = NSURL.URLWithString("http://live-wallpaper.net/iphone/img/app/i/p/iphone-4s-wallpapers-mobile-backgrounds-dark_2466f886de3472ef1fa968033f1da3e1_raw_1087fae1932cec8837695934b7eb1250_raw.jpg");
+        
+        
+//        let url = NSURL.URLWithString("");
 //        var err: NSError?
 //        var imageData :NSData = NSData.dataWithContentsOfURL(url,options: NSDataReadingOptions.DataReadingMappedIfSafe, error: &err)
 //        var bgImage = UIImage(data:imageData)
