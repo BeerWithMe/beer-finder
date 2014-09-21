@@ -22,12 +22,6 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="qmV-dF-TPg">
-                                <rect key="frame" x="101" y="421" width="118" height="31"/>
-                                <connections>
-                                    <action selector="ratingslider:" destination="9pv-A4-QxB" eventType="valueChanged" id="hWv-WS-7PD"/>
-                                </connections>
-                            </slider>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IMO-Rc-U8u">
                                 <rect key="frame" x="16" y="518" width="149" height="30"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="12"/>
@@ -67,6 +61,20 @@
                                     <action selector="submitratingbutton:" destination="9pv-A4-QxB" eventType="touchUpInside" id="S3C-pr-IPm"/>
                                 </connections>
                             </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="CG4-xX-QFX">
+                                <rect key="frame" x="65" y="423" width="185" height="29"/>
+                                <segments>
+                                    <segment title="1"/>
+                                    <segment title="2"/>
+                                    <segment title="3"/>
+                                    <segment title="4"/>
+                                    <segment title="5"/>
+                                </segments>
+                                <connections>
+                                    <action selector="ratingPicker:forEvent:" destination="9pv-A4-QxB" eventType="touchUpInside" id="EcT-dG-QkU"/>
+                                    <action selector="ratingsPicker:" destination="9pv-A4-QxB" eventType="valueChanged" id="HJG-3t-cgF"/>
+                                </connections>
+                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -77,7 +85,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o51-8t-dY5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="598.39999999999998" y="318.07999999999998"/>
+            <point key="canvasLocation" x="598" y="318"/>
         </scene>
         <!--Item-->
         <scene sceneID="brB-ty-lQn">
