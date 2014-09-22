@@ -3,9 +3,17 @@
   "private": true,
   "version": "0.0.0",
   "dependencies": {
-      "chai": "~1.8.0",
-      "mocha": "^1.21.4",
-      "request": "^2.34.0"
+
+    "chai": "~1.8.0",
+    "mocha": "^1.21.4",
+    "request": "^2.34.0"
+    "body-parser": "^1.8.2",
+    "express": "^4.9.1",
+    "express-session": "^1.8.2",
+    "neo4j": "^1.1.0",
+    "passport": "^0.2.1",
+    "passport-local": "^1.0.0"
+
   },
   "scripts": {
   	"test": "mocha spec"

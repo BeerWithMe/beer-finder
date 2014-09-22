@@ -3,7 +3,7 @@
 // the middleware to handle all routing
 var express = require('express');
 var app = express();
-require('./config/middleware.js')(app,express);
+require('./config.js')(app,express);
 require('./routes.js')(app);
 module.exports = app;
 
