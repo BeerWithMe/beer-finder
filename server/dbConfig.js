@@ -2,6 +2,7 @@ var neo4j = require('neo4j');
 var db = new neo4j.GraphDatabase('http://beeradvisor.cloudapp.net:7474/');
 var http = require('http');
 var fs = require('fs');
+var utils = require('./utils');
 
 module.exports = db;
 
@@ -9,6 +10,7 @@ module.exports = db;
 var getAllBeerQuery = "MATCH (n:Beer) RETURN n;";
 var createNewBeerQuery = ["CREATE (n:Beer {name: ({name}), ibu: ({ibu}), abv: ({abv}), description: ({description}), imgUrl: ({imgUrl}) })",
 						  "RETURN n;"].join('\n');
+var getOneBeerByNameQuery = "MATCH (n:Beer {name: {name}}) RETURN n;"
 
 db.createBeerNode = function(beerObj){
 	// If the beer object comes with a picture, use it, otherwise we will use a
@@ -118,7 +120,25 @@ db.getAllBeer = function(callback){
 	});
 };
 
+db.getOneBeer = function(beername, callback){
+  var params = {
+    name: beername
+  };
 
+  db.query(getOneBeerByNameQuery, params, function(err, beer){
+    if(err){
+      console.log(err);
+    }else{
+      // console.log(utils.makeData(beer, 'n')[0]);
+      var beerArray = utils.makeData(beer, 'n');
+      if(beerArray.length === 0){
+        callback(undefined);
+      }else{
+        callback(beerArray[0]);
+      }
+    }
+  });
+};
 
 
 
