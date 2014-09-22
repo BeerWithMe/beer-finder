@@ -9,19 +9,29 @@
 import UIKit
 import Foundation
 
-struct BeerData {
+public struct BeerData {
     
-    var test: NSDictionary?
+    var questionnaireImages: [String]
     
-    init() {
-       
+    public init() {
+        questionnaireImages = ["Test1", "Test2"]
     }
     
-    func testMethod () -> NSDictionary {
-        return test!
-    }
-    
-    func cycleImage () {
+    public func cycleImage () -> String {
+        
         println("You cycled images!")
+        return questionnaireImages[0]
+    }
+    
+}
+
+public class XYZ {
+    var test: String
+    public init() {
+        test = "Hello World!"
+    }
+    public func speak () -> String {
+        return test
     }
 }
+

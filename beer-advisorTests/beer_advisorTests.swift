@@ -8,6 +8,7 @@
 
 import UIKit
 import XCTest
+import beer_advisor
 
 class beer_advisorTests: XCTestCase {
     
@@ -21,8 +22,10 @@ class beer_advisorTests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
+    func testCycleImages() {
         // This is an example of a functional test case.
+        let obj = BeerData()
+        //XCTAssertNotNil(obj.cycleImage, "cycleImage method exists")
         XCTAssert(true, "Pass")
     }
     
