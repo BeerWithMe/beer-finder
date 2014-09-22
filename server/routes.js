@@ -37,4 +37,16 @@ module.exports = function(app) {
     function(req, res) {
     res.redirect(); //normally this would be homepage plus the username in the url... not sure here)
   })
+
+  app.get('/beer/:beername', function(req, res){
+    var beername = req.params.beername;
+    console.log("This is the beername: ", beername);
+    db.getOneBeer(beername, function(beerObj){
+      if(!beerObj){
+        res.status(404).send("Beer not Found");
+      }else{
+        res.send(JSON.stringify(beerObj));
+      }
+    });
+  });
 };

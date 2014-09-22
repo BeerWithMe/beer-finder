@@ -38,8 +38,9 @@ class FirstViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        let beerData = BeerData()
         let url = NSURL(string: "http://localhost:3000/questionnaire")
+        //let url = NSURL(string: beerData.url)
         
         let sharedSession = NSURLSession.sharedSession() //This sets up an asynchronous environment??
         let downloadTask: NSURLSessionDownloadTask = sharedSession.downloadTaskWithURL(url, completionHandler: { (location: NSURL!, response: NSURLResponse!, error: NSError!) -> Void in
