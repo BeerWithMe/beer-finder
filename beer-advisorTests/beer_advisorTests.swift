@@ -24,9 +24,9 @@ class beer_advisorTests: XCTestCase {
     
     func testCycleImages() {
         // This is an example of a functional test case.
-        let obj = BeerData()
+        let beerData = BeerData()
         //XCTAssertNotNil(obj.cycleImage, "cycleImage method exists")
-        XCTAssert(true, "Pass")
+        XCTAssertNotNil(beerData.cycleImage(), "Cycle Image did not return a proper value")
     }
     
     func testPerformanceExample() {
