@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B51E38D719CB6400003CA615 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51E38D619CB6400003CA615 /* ThirdViewController.swift */; };
+		B51E38D719CB6400003CA615 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51E38D619CB6400003CA615 /* MasterViewController.swift */; };
 		B55AAE2C19C8F36D0009ED2F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55AAE2B19C8F36D0009ED2F /* AppDelegate.swift */; };
 		B55AAE2E19C8F36D0009ED2F /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55AAE2D19C8F36D0009ED2F /* FirstViewController.swift */; };
 		B55AAE3019C8F36D0009ED2F /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55AAE2F19C8F36D0009ED2F /* SecondViewController.swift */; };
@@ -16,6 +16,7 @@
 		B55AAE3819C8F36D0009ED2F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B55AAE3619C8F36D0009ED2F /* LaunchScreen.xib */; };
 		B5BE5EE819CCF0280041DF11 /* BeerData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BE5EE719CCF0280041DF11 /* BeerData.swift */; };
 		B5E39E1119D09F86008C71CC /* beer_advisorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55AAE4319C8F36D0009ED2F /* beer_advisorTests.swift */; };
+		B5E39E4619D0EE87008C71CC /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E39E4519D0EE87008C71CC /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,7 +30,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		B51E38D619CB6400003CA615 /* ThirdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
+		B51E38D619CB6400003CA615 /* MasterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
 		B55AAE2619C8F36D0009ED2F /* beer-advisor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "beer-advisor.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B55AAE2A19C8F36D0009ED2F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B55AAE2B19C8F36D0009ED2F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -42,6 +43,7 @@
 		B55AAE4219C8F36D0009ED2F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B55AAE4319C8F36D0009ED2F /* beer_advisorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = beer_advisorTests.swift; sourceTree = "<group>"; };
 		B5BE5EE719CCF0280041DF11 /* BeerData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeerData.swift; sourceTree = "<group>"; };
+		B5E39E4519D0EE87008C71CC /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,7 +88,8 @@
 				B5BE5EE719CCF0280041DF11 /* BeerData.swift */,
 				B55AAE2B19C8F36D0009ED2F /* AppDelegate.swift */,
 				B55AAE2D19C8F36D0009ED2F /* FirstViewController.swift */,
-				B51E38D619CB6400003CA615 /* ThirdViewController.swift */,
+				B51E38D619CB6400003CA615 /* MasterViewController.swift */,
+				B5E39E4519D0EE87008C71CC /* DetailViewController.swift */,
 				B55AAE2F19C8F36D0009ED2F /* SecondViewController.swift */,
 				B55AAE3119C8F36D0009ED2F /* Main.storyboard */,
 				B55AAE3419C8F36D0009ED2F /* Images.xcassets */,
@@ -224,7 +227,8 @@
 				B5BE5EE819CCF0280041DF11 /* BeerData.swift in Sources */,
 				B55AAE3019C8F36D0009ED2F /* SecondViewController.swift in Sources */,
 				B55AAE2C19C8F36D0009ED2F /* AppDelegate.swift in Sources */,
-				B51E38D719CB6400003CA615 /* ThirdViewController.swift in Sources */,
+				B5E39E4619D0EE87008C71CC /* DetailViewController.swift in Sources */,
+				B51E38D719CB6400003CA615 /* MasterViewController.swift in Sources */,
 				B55AAE2E19C8F36D0009ED2F /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
