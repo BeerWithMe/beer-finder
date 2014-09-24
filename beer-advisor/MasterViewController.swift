@@ -9,18 +9,35 @@
 import UIKit
 
 class MasterViewController: UITableViewController {
+    var recommendationData = Recommendations()
+    
     
     var objects = NSMutableArray()
-    
     
     override func awakeFromNib() {
         super.awakeFromNib()
     }
     
+    func populateView() {
+        println("POPULATE VIEW!!!!")
+        var recommendationData = Recommendations()
+        var recommendationList = recommendationData.recommendationList
+        for (var i = 0; i < recommendationList.count; i++) {
+            println("it ran!!!")
+            objects.insertObject(recommendationList[i]["name"]!!, atIndex: i)
+            let indexPath = NSIndexPath(forRow: i, inSection: 0)
+            self.tableView.insertRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
+        }
+        println("POPULATE VIEW END")
+    }
+    
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         self.navigationItem.leftBarButtonItem = self.editButtonItem()
+        println("VIEW DID LOAD")
+        self.populateView()
         
         let addButton = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: "insertNewObject:")
         self.navigationItem.rightBarButtonItem = addButton
@@ -32,7 +49,10 @@ class MasterViewController: UITableViewController {
     }
     
     func insertNewObject(sender: AnyObject) {
-        objects.insertObject("Hello World", atIndex: 0)
+        //recommendationData.downloadData()
+        let recommendationList = recommendationData.recommendationList
+        println(recommendationList[0]["name"]!!)
+        objects.insertObject(recommendationList[0]["name"]!!, atIndex: 0)
         let indexPath = NSIndexPath(forRow: 0, inSection: 0)
         self.tableView.insertRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
     }
@@ -42,7 +62,7 @@ class MasterViewController: UITableViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "showDetail" {
             if let indexPath = self.tableView.indexPathForSelectedRow() {
-                let object = objects[indexPath.row]
+                let object: AnyObject = objects[indexPath.row]
                 (segue.destinationViewController as DetailViewController).detailItem = object
             }
         }
@@ -61,8 +81,10 @@ class MasterViewController: UITableViewController {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as UITableViewCell
         
-        let object = objects[indexPath.row]
+        let object: AnyObject = objects[indexPath.row]
         cell.textLabel?.text = object.description
+        //cell.textLabel?.text = "Hey guys!"
+
         return cell
     }
     
@@ -80,5 +102,6 @@ class MasterViewController: UITableViewController {
         }
     }
     
+
     
 }

@@ -17,6 +17,8 @@ class FirstViewController: UIViewController {
     }
     
     @IBAction func RecommendationButton(sender: AnyObject) {
+//        var masterView = MasterViewController()
+//        masterView.populateView()
         println("You clicked 'recommendations' button!")
     }
     
@@ -24,10 +26,6 @@ class FirstViewController: UIViewController {
         println("You clicked 'Submit!'")
         beerData.cycleImage()
     }
-    
-//    @IBAction func ratingslider(sender: AnyObject) {
-//        println("You slid!")
-//    }
     
     
     @IBAction func ratingsPicker(sender: UISegmentedControl) {
@@ -54,43 +52,10 @@ class FirstViewController: UIViewController {
                 var err: NSError?
                 var imageData: NSData = NSData.dataWithContentsOfURL(imgUrl, options: NSDataReadingOptions.DataReadingMappedIfSafe, error: &err)
                 self.questionnaireImage.image = UIImage(data: imageData)
-                
             }
         })
         downloadTask.resume()
 
-                    //let returnData = NSData(contentsOfURL: url, encoding: NSUTF8StringEncoding)
-                    
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-                    
-//            let url = NSURL.URLWithString("\(returnData.imageURL)")
-//            var err: NSError?
-//            var imageData :NSData = NSData.dataWithContentsOfURL(url, options: NSDataReadingOptions.DataReadingMappedIfSafe, error: &err)
-//            self.questionnaireImage.image = UIImage(data: imageData)
-        
-        
-       // task.resume()
-        
- 
-        
-//        let url = NSURL.URLWithString("");
-//        var err: NSError?
-//        var imageData :NSData = NSData.dataWithContentsOfURL(url,options: NSDataReadingOptions.DataReadingMappedIfSafe, error: &err)
-//        var bgImage = UIImage(data:imageData)
         
         }
 
@@ -101,4 +66,5 @@ class FirstViewController: UIViewController {
 
 
 }
+
 

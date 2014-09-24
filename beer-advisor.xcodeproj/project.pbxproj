@@ -17,6 +17,8 @@
 		B5BE5EE819CCF0280041DF11 /* BeerData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BE5EE719CCF0280041DF11 /* BeerData.swift */; };
 		B5E39E1119D09F86008C71CC /* beer_advisorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55AAE4319C8F36D0009ED2F /* beer_advisorTests.swift */; };
 		B5E39E4619D0EE87008C71CC /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E39E4519D0EE87008C71CC /* DetailViewController.swift */; };
+		B5E39E4819D1186D008C71CC /* Recommendations.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E39E4719D1186D008C71CC /* Recommendations.swift */; };
+		B5E39E8819D231D9008C71CC /* Recommendation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E39E8719D231D9008C71CC /* Recommendation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +46,8 @@
 		B55AAE4319C8F36D0009ED2F /* beer_advisorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = beer_advisorTests.swift; sourceTree = "<group>"; };
 		B5BE5EE719CCF0280041DF11 /* BeerData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeerData.swift; sourceTree = "<group>"; };
 		B5E39E4519D0EE87008C71CC /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		B5E39E4719D1186D008C71CC /* Recommendations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Recommendations.swift; sourceTree = "<group>"; };
+		B5E39E8719D231D9008C71CC /* Recommendation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Recommendation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +90,8 @@
 			isa = PBXGroup;
 			children = (
 				B5BE5EE719CCF0280041DF11 /* BeerData.swift */,
+				B5E39E4719D1186D008C71CC /* Recommendations.swift */,
+				B5E39E8719D231D9008C71CC /* Recommendation.swift */,
 				B55AAE2B19C8F36D0009ED2F /* AppDelegate.swift */,
 				B55AAE2D19C8F36D0009ED2F /* FirstViewController.swift */,
 				B51E38D619CB6400003CA615 /* MasterViewController.swift */,
@@ -228,6 +234,8 @@
 				B55AAE3019C8F36D0009ED2F /* SecondViewController.swift in Sources */,
 				B55AAE2C19C8F36D0009ED2F /* AppDelegate.swift in Sources */,
 				B5E39E4619D0EE87008C71CC /* DetailViewController.swift in Sources */,
+				B5E39E8819D231D9008C71CC /* Recommendation.swift in Sources */,
+				B5E39E4819D1186D008C71CC /* Recommendations.swift in Sources */,
 				B51E38D719CB6400003CA615 /* MasterViewController.swift in Sources */,
 				B55AAE2E19C8F36D0009ED2F /* FirstViewController.swift in Sources */,
 			);
