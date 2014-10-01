@@ -25,13 +25,5 @@ public struct BeerData {
     
 }
 
-public class XYZ {
-    var test: String
-    public init() {
-        test = "Hello World!"
-    }
-    public func speak () -> String {
-        return test
-    }
-}
+
 
