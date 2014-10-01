@@ -8,11 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		B51E38D719CB6400003CA615 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51E38D619CB6400003CA615 /* MasterViewController.swift */; };
+		B535256719DC79E200F4AEE6 /* BeerRecommendation.m in Sources */ = {isa = PBXBuildFile; fileRef = B535256119DC79E200F4AEE6 /* BeerRecommendation.m */; };
+		B535256819DC79E200F4AEE6 /* BeerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B535256319DC79E200F4AEE6 /* BeerViewController.m */; };
+		B535256A19DC79E200F4AEE6 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B535256619DC79E200F4AEE6 /* TableViewController.m */; };
+		B535256C19DC7AC200F4AEE6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B535256B19DC7AC200F4AEE6 /* Images.xcassets */; };
 		B55AAE2C19C8F36D0009ED2F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55AAE2B19C8F36D0009ED2F /* AppDelegate.swift */; };
 		B55AAE2E19C8F36D0009ED2F /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55AAE2D19C8F36D0009ED2F /* FirstViewController.swift */; };
 		B55AAE3019C8F36D0009ED2F /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55AAE2F19C8F36D0009ED2F /* SecondViewController.swift */; };
 		B55AAE3319C8F36D0009ED2F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B55AAE3119C8F36D0009ED2F /* Main.storyboard */; };
-		B55AAE3519C8F36D0009ED2F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B55AAE3419C8F36D0009ED2F /* Images.xcassets */; };
 		B55AAE3819C8F36D0009ED2F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B55AAE3619C8F36D0009ED2F /* LaunchScreen.xib */; };
 		B5BE5EE819CCF0280041DF11 /* BeerData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BE5EE719CCF0280041DF11 /* BeerData.swift */; };
 		B5E39E1119D09F86008C71CC /* beer_advisorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55AAE4319C8F36D0009ED2F /* beer_advisorTests.swift */; };
@@ -33,13 +36,20 @@
 
 /* Begin PBXFileReference section */
 		B51E38D619CB6400003CA615 /* MasterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
+		B535255619D71D7200F4AEE6 /* beer-advisor-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "beer-advisor-Bridging-Header.h"; sourceTree = "<group>"; };
+		B535256019DC79E200F4AEE6 /* BeerRecommendation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BeerRecommendation.h; sourceTree = "<group>"; };
+		B535256119DC79E200F4AEE6 /* BeerRecommendation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BeerRecommendation.m; sourceTree = "<group>"; };
+		B535256219DC79E200F4AEE6 /* BeerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BeerViewController.h; sourceTree = "<group>"; };
+		B535256319DC79E200F4AEE6 /* BeerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BeerViewController.m; sourceTree = "<group>"; };
+		B535256519DC79E200F4AEE6 /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
+		B535256619DC79E200F4AEE6 /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
+		B535256B19DC7AC200F4AEE6 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		B55AAE2619C8F36D0009ED2F /* beer-advisor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "beer-advisor.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B55AAE2A19C8F36D0009ED2F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B55AAE2B19C8F36D0009ED2F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B55AAE2D19C8F36D0009ED2F /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 		B55AAE2F19C8F36D0009ED2F /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		B55AAE3219C8F36D0009ED2F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		B55AAE3419C8F36D0009ED2F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		B55AAE3719C8F36D0009ED2F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		B55AAE3D19C8F36D0009ED2F /* beer-advisorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "beer-advisorTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B55AAE4219C8F36D0009ED2F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -89,6 +99,12 @@
 		B55AAE2819C8F36D0009ED2F /* beer-advisor */ = {
 			isa = PBXGroup;
 			children = (
+				B535256019DC79E200F4AEE6 /* BeerRecommendation.h */,
+				B535256119DC79E200F4AEE6 /* BeerRecommendation.m */,
+				B535256219DC79E200F4AEE6 /* BeerViewController.h */,
+				B535256319DC79E200F4AEE6 /* BeerViewController.m */,
+				B535256519DC79E200F4AEE6 /* TableViewController.h */,
+				B535256619DC79E200F4AEE6 /* TableViewController.m */,
 				B5BE5EE719CCF0280041DF11 /* BeerData.swift */,
 				B5E39E4719D1186D008C71CC /* Recommendations.swift */,
 				B5E39E8719D231D9008C71CC /* Recommendation.swift */,
@@ -98,9 +114,10 @@
 				B5E39E4519D0EE87008C71CC /* DetailViewController.swift */,
 				B55AAE2F19C8F36D0009ED2F /* SecondViewController.swift */,
 				B55AAE3119C8F36D0009ED2F /* Main.storyboard */,
-				B55AAE3419C8F36D0009ED2F /* Images.xcassets */,
 				B55AAE3619C8F36D0009ED2F /* LaunchScreen.xib */,
+				B535256B19DC7AC200F4AEE6 /* Images.xcassets */,
 				B55AAE2919C8F36D0009ED2F /* Supporting Files */,
+				B535255619D71D7200F4AEE6 /* beer-advisor-Bridging-Header.h */,
 			);
 			path = "beer-advisor";
 			sourceTree = "<group>";
@@ -210,9 +227,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B535256C19DC7AC200F4AEE6 /* Images.xcassets in Resources */,
 				B55AAE3319C8F36D0009ED2F /* Main.storyboard in Resources */,
 				B55AAE3819C8F36D0009ED2F /* LaunchScreen.xib in Resources */,
-				B55AAE3519C8F36D0009ED2F /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -230,12 +247,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B535256A19DC79E200F4AEE6 /* TableViewController.m in Sources */,
 				B5BE5EE819CCF0280041DF11 /* BeerData.swift in Sources */,
 				B55AAE3019C8F36D0009ED2F /* SecondViewController.swift in Sources */,
+				B535256819DC79E200F4AEE6 /* BeerViewController.m in Sources */,
 				B55AAE2C19C8F36D0009ED2F /* AppDelegate.swift in Sources */,
 				B5E39E4619D0EE87008C71CC /* DetailViewController.swift in Sources */,
 				B5E39E8819D231D9008C71CC /* Recommendation.swift in Sources */,
 				B5E39E4819D1186D008C71CC /* Recommendations.swift in Sources */,
+				B535256719DC79E200F4AEE6 /* BeerRecommendation.m in Sources */,
 				B51E38D719CB6400003CA615 /* MasterViewController.swift in Sources */,
 				B55AAE2E19C8F36D0009ED2F /* FirstViewController.swift in Sources */,
 			);
@@ -360,9 +380,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "beer-advisor/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "beer-advisor/beer-advisor-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -370,9 +393,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "beer-advisor/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "beer-advisor/beer-advisor-Bridging-Header.h";
 			};
 			name = Release;
 		};
