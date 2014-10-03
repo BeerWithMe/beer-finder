@@ -10,6 +10,14 @@ import UIKit
 
 class FirstViewController: UIViewController {
     
+    var array = [Beer]()
+    
+    var bud = Beer(name: "Budweiser", imgUrl: "https://s3.amazonaws.com/brewerydbapi/beer/1P45iR/upl[ad_upBR4q-large.png", beernameInDB:"Anheuser-Busch InBev-Budweiser")
+    
+    //array += [bud]
+    
+    //array.append(bud)
+    
     //let beerData = BeerData()
     
     @IBAction func DontKnow(sender: AnyObject) {
@@ -33,6 +41,8 @@ class FirstViewController: UIViewController {
     }
     
     @IBOutlet weak var questionnaireImage: UIImageView!
+    
+    questionnaireImage.image = bud.img as UIImageView
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -64,7 +74,28 @@ class FirstViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    
+
 
 }
 
+
+// array += newBeer
+
+
+
+/*['name': 'Budweiser', 'imgUrl': 'https://s3.amazonaws.com/brewerydbapi/beer/1P45iR/upload_upBR4q-large.png', 'beernameInDB':'Anheuser-Busch InBev-Budweiser'],
+
+['name': 'Racer 5 IPA', 'imgUrl': 'https://s3.amazonaws.com/brewerydbapi/beer/o1OELJ/upload_OutGJZ-large.png', 'beernameInDB':'Bear Republic Brewing Company-Racer 5 IPA'],
+
+['name': 'Anchor Steam' , 'imgUrl': 'https://s3.amazonaws.com/brewerydbapi/beer/Uiol9p/upload_drOw0u-large.png', 'beernameInDB':'Anchor Brewing Company-Anchor Steam'],
+
+['name': 'Guinness Draught', 'imgUrl': 'https://s3.amazonaws.com/brewerydbapi/beer/StkEiv/upload_etArOb-large.png', 'beernameInDB':'Guinness-Guinness Draught'],
+
+['name': 'Blue Moon Belgian White' , 'imgUrl': 'https://s3.amazonaws.com/brewerydbapi/beer/dDXOEp/upload_SZEtGz-large.png', 'beernameInDB':'Blue Moon Brewing Company-Blue Moon Belgian White'],
+
+['name': 'Lagunitas - IPA', 'imgUrl': 'https://s3.amazonaws.com/brewerydbapi/beer/iLlMCb/upload_xp2OJo-large.png', 'beernameInDB':'Lagunitas Brewing Company-IPA'],
+
+['name': 'Pliny the Elder', 'imgUrl': 'https://s3.amazonaws.com/brewerydbapi/beer/XAXGgF/upload_or9CTI-large.png', 'beernameInDB':'Russian River Brewing Company-Pliny the Elder']
+*/
 
