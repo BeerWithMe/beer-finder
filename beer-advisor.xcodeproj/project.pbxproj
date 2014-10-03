@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		68A8CEC319DE181A0079EB14 /* Beer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A8CEC219DE181A0079EB14 /* Beer.swift */; };
 		B51E38D719CB6400003CA615 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51E38D619CB6400003CA615 /* MasterViewController.swift */; };
 		B535256719DC79E200F4AEE6 /* BeerRecommendation.m in Sources */ = {isa = PBXBuildFile; fileRef = B535256119DC79E200F4AEE6 /* BeerRecommendation.m */; };
 		B535256819DC79E200F4AEE6 /* BeerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B535256319DC79E200F4AEE6 /* BeerViewController.m */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		68A8CEC219DE181A0079EB14 /* Beer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Beer.swift; sourceTree = "<group>"; };
 		B51E38D619CB6400003CA615 /* MasterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
 		B535255619D71D7200F4AEE6 /* beer-advisor-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "beer-advisor-Bridging-Header.h"; sourceTree = "<group>"; };
 		B535256019DC79E200F4AEE6 /* BeerRecommendation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BeerRecommendation.h; sourceTree = "<group>"; };
@@ -114,6 +116,7 @@
 				B5E39E4519D0EE87008C71CC /* DetailViewController.swift */,
 				B55AAE2F19C8F36D0009ED2F /* SecondViewController.swift */,
 				B55AAE3119C8F36D0009ED2F /* Main.storyboard */,
+				68A8CEC219DE181A0079EB14 /* Beer.swift */,
 				B55AAE3619C8F36D0009ED2F /* LaunchScreen.xib */,
 				B535256B19DC7AC200F4AEE6 /* Images.xcassets */,
 				B55AAE2919C8F36D0009ED2F /* Supporting Files */,
@@ -254,6 +257,7 @@
 				B55AAE2C19C8F36D0009ED2F /* AppDelegate.swift in Sources */,
 				B5E39E4619D0EE87008C71CC /* DetailViewController.swift in Sources */,
 				B5E39E8819D231D9008C71CC /* Recommendation.swift in Sources */,
+				68A8CEC319DE181A0079EB14 /* Beer.swift in Sources */,
 				B5E39E4819D1186D008C71CC /* Recommendations.swift in Sources */,
 				B535256719DC79E200F4AEE6 /* BeerRecommendation.m in Sources */,
 				B51E38D719CB6400003CA615 /* MasterViewController.swift in Sources */,

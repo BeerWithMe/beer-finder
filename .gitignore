@@ -17,3 +17,4 @@ DerivedData
 *.ipa
 *.xcuserstate
 xcuserdatad
+.DS_Store
