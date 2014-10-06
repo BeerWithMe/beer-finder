@@ -24,7 +24,7 @@ class Beer {
         let task = NSURLSession.sharedSession().dataTaskWithURL(self.imgUrl) {(data, response, error) in
             self.imageData = data
             self.img = UIImage(data: self.imageData!)
-            println(NSString(data: data, encoding: NSUTF8StringEncoding))
+            //println(NSString(data: data, encoding: NSUTF8StringEncoding))
         }
         
         task.resume()

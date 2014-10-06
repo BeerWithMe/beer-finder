@@ -45,7 +45,16 @@ class FirstViewController: UIViewController {
         println("You picked")
     }
     
+    
+    
     @IBOutlet weak var questionnaireImage: UIImageView!
+    
+    
+    @IBAction func logout(sender: AnyObject) {
+        PFUser.logOut()
+        self.performSegueWithIdentifier("showLogin", sender: self)
+    }
+    
     
     func start (){
         questionnaireImage.image = bud.img
@@ -66,6 +75,15 @@ class FirstViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        var currentUser = PFUser()
+        
+        //var currentUser: PFUser = PFUser.currentUser()
+        if (PFUser.currentUser() != nil) {
+            println(PFUser.currentUser().username)
+        } else {
+            self.performSegueWithIdentifier("showLogin", sender:self)
+        }
+        
 //        let beerData = BeerData()
 //        let url = NSURL(string: "http://localhost:3000/questionnaire")
 //        //let url = NSURL(string: beerData.url)
