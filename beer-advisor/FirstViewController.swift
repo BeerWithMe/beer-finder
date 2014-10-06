@@ -10,10 +10,17 @@ import UIKit
 
 class FirstViewController: UIViewController {
     
-    var array = [Beer]()
+    var array : [Beer] = [
+        Beer(name: "Budweiser", imgUrl: "https://s3.amazonaws.com/brewerydbapi/beer/1P45iR/upl[ad_upBR4q-large.png", beernameInDB:"Anheuser-Busch InBev-Budweiser"),
+        Beer(name: "Racer 5 IPA", imgUrl: "https://s3.amazonaws.com/brewerydbapi/beer/o1OELJ/upload_OutGJZ-large.png", beernameInDB:"Bear Republic Brewing Company-Racer 5 IPA"),
+        Beer(name: "Anchor Steam", imgUrl: "https://s3.amazonaws.com/brewerydbapi/beer/Uiol9p/upload_drOw0u-large.png", beernameInDB:"Anchor Brewing Company-Anchor Steam"),
+        Beer(name: "Guinness Draught", imgUrl: "https://s3.amazonaws.com/brewerydbapi/beer/StkEiv/upload_etArOb-large.png", beernameInDB:"Guinness-Guinness Draught"),
+        Beer(name: "Blue Moon Belgian White", imgUrl: "https://s3.amazonaws.com/brewerydbapi/beer/dDXOEp/upload_SZEtGz-large.png", beernameInDB:"Blue Moon Brewing Company-Blue Moon Belgian White"),
+        Beer(name: "Lagunitas - IPA", imgUrl: "https://s3.amazonaws.com/brewerydbapi/beer/iLlMCb/upload_xp2OJo-large.png", beernameInDB:"Lagunitas Brewing Company-IPA"),
+        Beer(name: "Pliny the Elder", imgUrl: "https://s3.amazonaws.com/brewerydbapi/beer/XAXGgF/upload_or9CTI-large.png", beernameInDB:"Russian River Brewing Company-Pliny the Elder")
+    ]
     var arrayIndex = 0
     
-    var bud = Beer(name: "Budweiser", imgUrl: "https://s3.amazonaws.com/brewerydbapi/beer/1P45iR/upl[ad_upBR4q-large.png", beernameInDB:"Anheuser-Busch InBev-Budweiser")
     
     //array += [bud]
     
@@ -47,17 +54,6 @@ class FirstViewController: UIViewController {
     
     @IBOutlet weak var questionnaireImage: UIImageView!
     
-    func start (){
-        questionnaireImage.image = bud.img
-        array += [
-            Beer(name: "Racer 5 IPA", imgUrl: "https://s3.amazonaws.com/brewerydbapi/beer/o1OELJ/upload_OutGJZ-large.png", beernameInDB:"Bear Republic Brewing Company-Racer 5 IPA"),
-            Beer(name: "Anchor Steam", imgUrl: "https://s3.amazonaws.com/brewerydbapi/beer/Uiol9p/upload_drOw0u-large.png", beernameInDB:"Anchor Brewing Company-Anchor Steam"),
-            Beer(name: "Guinness Draught", imgUrl: "https://s3.amazonaws.com/brewerydbapi/beer/StkEiv/upload_etArOb-large.png", beernameInDB:"Guinness-Guinness Draught"),
-            Beer(name: "Blue Moon Belgian White", imgUrl: "https://s3.amazonaws.com/brewerydbapi/beer/dDXOEp/upload_SZEtGz-large.png", beernameInDB:"Blue Moon Brewing Company-Blue Moon Belgian White"),
-            Beer(name: "Lagunitas - IPA", imgUrl: "https://s3.amazonaws.com/brewerydbapi/beer/iLlMCb/upload_xp2OJo-large.png", beernameInDB:"Lagunitas Brewing Company-IPA"),
-            Beer(name: "Pliny the Elder", imgUrl: "https://s3.amazonaws.com/brewerydbapi/beer/XAXGgF/upload_or9CTI-large.png", beernameInDB:"Russian River Brewing Company-Pliny the Elder")
-        ]
-    }
     
     func cycleImage (){
         questionnaireImage.image = array[arrayIndex].img
@@ -66,6 +62,7 @@ class FirstViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        questionnaireImage.image = array[0].img
 //        let beerData = BeerData()
 //        let url = NSURL(string: "http://localhost:3000/questionnaire")
 //        //let url = NSURL(string: beerData.url)
