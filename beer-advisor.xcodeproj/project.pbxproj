@@ -26,6 +26,10 @@
 		B535261419E30CAB00F4AEE6 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B535261319E30CAB00F4AEE6 /* QuartzCore.framework */; };
 		B535261619E30CBC00F4AEE6 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B535261519E30CBC00F4AEE6 /* CFNetwork.framework */; };
 		B535261819E30CD300F4AEE6 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B535261719E30CD300F4AEE6 /* SystemConfiguration.framework */; };
+		B535262119E31FE800F4AEE6 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B535261D19E31FE800F4AEE6 /* AudioToolbox.framework */; };
+		B535262219E31FE800F4AEE6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B535261E19E31FE800F4AEE6 /* CoreGraphics.framework */; };
+		B535262319E31FE800F4AEE6 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B535261F19E31FE800F4AEE6 /* CoreLocation.framework */; };
+		B535262419E31FE800F4AEE6 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B535262019E31FE800F4AEE6 /* libz.dylib */; };
 		B55AAE2C19C8F36D0009ED2F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55AAE2B19C8F36D0009ED2F /* AppDelegate.swift */; };
 		B55AAE2E19C8F36D0009ED2F /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55AAE2D19C8F36D0009ED2F /* FirstViewController.swift */; };
 		B55AAE3019C8F36D0009ED2F /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55AAE2F19C8F36D0009ED2F /* SecondViewController.swift */; };
@@ -63,9 +67,9 @@
 		B53525FD19E30B7800F4AEE6 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		B53525FF19E30BBD00F4AEE6 /* SignupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignupViewController.h; sourceTree = "<group>"; };
 		B535260019E30BBD00F4AEE6 /* SignupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignupViewController.m; sourceTree = "<group>"; };
-		B535260319E30C3600F4AEE6 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
-		B535260419E30C3600F4AEE6 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
-		B535260519E30C3600F4AEE6 /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtils.framework; sourceTree = "<group>"; };
+		B535260319E30C3600F4AEE6 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = "parse-library-1.4.1/Bolts.framework"; sourceTree = "<group>"; };
+		B535260419E30C3600F4AEE6 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = "parse-library-1.4.1/Parse.framework"; sourceTree = "<group>"; };
+		B535260519E30C3600F4AEE6 /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseFacebookUtils.framework; path = "parse-library-1.4.1/ParseFacebookUtils.framework"; sourceTree = "<group>"; };
 		B535260919E30C6E00F4AEE6 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		B535260B19E30C7C00F4AEE6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		B535260D19E30C8900F4AEE6 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
@@ -75,6 +79,10 @@
 		B535261519E30CBC00F4AEE6 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		B535261719E30CD300F4AEE6 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		B535261919E30D8500F4AEE6 /* Parse.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Parse.h; path = "parse-library-1.4.1/Parse.framework/Headers/Parse.h"; sourceTree = "<group>"; };
+		B535261D19E31FE800F4AEE6 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		B535261E19E31FE800F4AEE6 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		B535261F19E31FE800F4AEE6 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		B535262019E31FE800F4AEE6 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		B55AAE2619C8F36D0009ED2F /* beer-advisor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "beer-advisor.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B55AAE2A19C8F36D0009ED2F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B55AAE2B19C8F36D0009ED2F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -96,6 +104,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B535262119E31FE800F4AEE6 /* AudioToolbox.framework in Frameworks */,
+				B535262219E31FE800F4AEE6 /* CoreGraphics.framework in Frameworks */,
+				B535262319E31FE800F4AEE6 /* CoreLocation.framework in Frameworks */,
+				B535262419E31FE800F4AEE6 /* libz.dylib in Frameworks */,
 				B535261819E30CD300F4AEE6 /* SystemConfiguration.framework in Frameworks */,
 				B535261619E30CBC00F4AEE6 /* CFNetwork.framework in Frameworks */,
 				B535261419E30CAB00F4AEE6 /* QuartzCore.framework in Frameworks */,
@@ -120,16 +132,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		B535260219E30C3600F4AEE6 /* parse-library-1.4.1 */ = {
-			isa = PBXGroup;
-			children = (
-				B535260319E30C3600F4AEE6 /* Bolts.framework */,
-				B535260419E30C3600F4AEE6 /* Parse.framework */,
-				B535260519E30C3600F4AEE6 /* ParseFacebookUtils.framework */,
-			);
-			path = "parse-library-1.4.1";
-			sourceTree = "<group>";
-		};
 		B55AAE1D19C8F36D0009ED2F = {
 			isa = PBXGroup;
 			children = (
@@ -174,15 +176,22 @@
 				B535261919E30D8500F4AEE6 /* Parse.h */,
 				B55AAE3619C8F36D0009ED2F /* LaunchScreen.xib */,
 				B535256B19DC7AC200F4AEE6 /* Images.xcassets */,
-				B55AAE2919C8F36D0009ED2F /* Supporting Files */,
 				B535255619D71D7200F4AEE6 /* beer-advisor-Bridging-Header.h */,
+				B55AAE2919C8F36D0009ED2F /* SupportingFiles */,
 			);
 			path = "beer-advisor";
 			sourceTree = "<group>";
 		};
-		B55AAE2919C8F36D0009ED2F /* Supporting Files */ = {
+		B55AAE2919C8F36D0009ED2F /* SupportingFiles */ = {
 			isa = PBXGroup;
 			children = (
+				B535260319E30C3600F4AEE6 /* Bolts.framework */,
+				B535260419E30C3600F4AEE6 /* Parse.framework */,
+				B535260519E30C3600F4AEE6 /* ParseFacebookUtils.framework */,
+				B535261D19E31FE800F4AEE6 /* AudioToolbox.framework */,
+				B535261E19E31FE800F4AEE6 /* CoreGraphics.framework */,
+				B535261F19E31FE800F4AEE6 /* CoreLocation.framework */,
+				B535262019E31FE800F4AEE6 /* libz.dylib */,
 				B535261719E30CD300F4AEE6 /* SystemConfiguration.framework */,
 				B535261519E30CBC00F4AEE6 /* CFNetwork.framework */,
 				B535261319E30CAB00F4AEE6 /* QuartzCore.framework */,
@@ -191,10 +200,9 @@
 				B535260D19E30C8900F4AEE6 /* Security.framework */,
 				B535260B19E30C7C00F4AEE6 /* Foundation.framework */,
 				B535260919E30C6E00F4AEE6 /* UIKit.framework */,
-				B535260219E30C3600F4AEE6 /* parse-library-1.4.1 */,
 				B55AAE2A19C8F36D0009ED2F /* Info.plist */,
 			);
-			name = "Supporting Files";
+			name = SupportingFiles;
 			sourceTree = "<group>";
 		};
 		B55AAE4019C8F36D0009ED2F /* beer-advisorTests */ = {
