@@ -13,15 +13,24 @@ class Beer {
     let name : String
     let beernameInDB : String
     let imgUrl : NSURL
-    var err : NSError?
-    let imageData : NSData
-    let img : UIImage
+    var imageData : NSData?
+    var img : UIImage?
     init(name : String, imgUrl: String, beernameInDB : String){
-        self.name = name
+
         self.imgUrl = NSURL.URLWithString(imgUrl);
+        self.name = name
         self.beernameInDB = beernameInDB
-        self.imageData = NSData.dataWithContentsOfURL(self.imgUrl,options: NSDataReadingOptions.DataReadingMappedIfSafe, error: &err)
-        self.img = UIImage(data: imageData)
+        
+        let task = NSURLSession.sharedSession().dataTaskWithURL(self.imgUrl) {(data, response, error) in
+            self.imageData = data
+            self.img = UIImage(data: self.imageData!)
+            println(NSString(data: data, encoding: NSUTF8StringEncoding))
+        }
+        
+        task.resume()
+
+//        self.imageData = NSData.dataWithContentsOfURL(self.imgUrl,options: NSDataReadingOptions.DataReadingMappedIfSafe, error: &err)
+//        self.img = UIImage(data: self.imageData)
     }
 }
 
