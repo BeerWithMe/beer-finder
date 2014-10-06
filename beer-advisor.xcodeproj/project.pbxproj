@@ -13,6 +13,19 @@
 		B535256819DC79E200F4AEE6 /* BeerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B535256319DC79E200F4AEE6 /* BeerViewController.m */; };
 		B535256A19DC79E200F4AEE6 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B535256619DC79E200F4AEE6 /* TableViewController.m */; };
 		B535256C19DC7AC200F4AEE6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B535256B19DC7AC200F4AEE6 /* Images.xcassets */; };
+		B53525FE19E30B7800F4AEE6 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B53525FD19E30B7800F4AEE6 /* LoginViewController.m */; };
+		B535260119E30BBD00F4AEE6 /* SignupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B535260019E30BBD00F4AEE6 /* SignupViewController.m */; };
+		B535260619E30C3600F4AEE6 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B535260319E30C3600F4AEE6 /* Bolts.framework */; };
+		B535260719E30C3600F4AEE6 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B535260419E30C3600F4AEE6 /* Parse.framework */; };
+		B535260819E30C3600F4AEE6 /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B535260519E30C3600F4AEE6 /* ParseFacebookUtils.framework */; };
+		B535260A19E30C6E00F4AEE6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B535260919E30C6E00F4AEE6 /* UIKit.framework */; };
+		B535260C19E30C7C00F4AEE6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B535260B19E30C7C00F4AEE6 /* Foundation.framework */; };
+		B535260E19E30C8900F4AEE6 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B535260D19E30C8900F4AEE6 /* Security.framework */; };
+		B535261019E30C9700F4AEE6 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B535260F19E30C9700F4AEE6 /* StoreKit.framework */; };
+		B535261219E30CA400F4AEE6 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B535261119E30CA400F4AEE6 /* MobileCoreServices.framework */; };
+		B535261419E30CAB00F4AEE6 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B535261319E30CAB00F4AEE6 /* QuartzCore.framework */; };
+		B535261619E30CBC00F4AEE6 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B535261519E30CBC00F4AEE6 /* CFNetwork.framework */; };
+		B535261819E30CD300F4AEE6 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B535261719E30CD300F4AEE6 /* SystemConfiguration.framework */; };
 		B55AAE2C19C8F36D0009ED2F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55AAE2B19C8F36D0009ED2F /* AppDelegate.swift */; };
 		B55AAE2E19C8F36D0009ED2F /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55AAE2D19C8F36D0009ED2F /* FirstViewController.swift */; };
 		B55AAE3019C8F36D0009ED2F /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55AAE2F19C8F36D0009ED2F /* SecondViewController.swift */; };
@@ -46,6 +59,22 @@
 		B535256519DC79E200F4AEE6 /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
 		B535256619DC79E200F4AEE6 /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
 		B535256B19DC7AC200F4AEE6 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		B53525FC19E30B7800F4AEE6 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		B53525FD19E30B7800F4AEE6 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		B53525FF19E30BBD00F4AEE6 /* SignupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignupViewController.h; sourceTree = "<group>"; };
+		B535260019E30BBD00F4AEE6 /* SignupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignupViewController.m; sourceTree = "<group>"; };
+		B535260319E30C3600F4AEE6 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		B535260419E30C3600F4AEE6 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		B535260519E30C3600F4AEE6 /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtils.framework; sourceTree = "<group>"; };
+		B535260919E30C6E00F4AEE6 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		B535260B19E30C7C00F4AEE6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		B535260D19E30C8900F4AEE6 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		B535260F19E30C9700F4AEE6 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		B535261119E30CA400F4AEE6 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		B535261319E30CAB00F4AEE6 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		B535261519E30CBC00F4AEE6 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		B535261719E30CD300F4AEE6 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		B535261919E30D8500F4AEE6 /* Parse.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Parse.h; path = "parse-library-1.4.1/Parse.framework/Headers/Parse.h"; sourceTree = "<group>"; };
 		B55AAE2619C8F36D0009ED2F /* beer-advisor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "beer-advisor.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B55AAE2A19C8F36D0009ED2F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B55AAE2B19C8F36D0009ED2F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -67,6 +96,17 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B535261819E30CD300F4AEE6 /* SystemConfiguration.framework in Frameworks */,
+				B535261619E30CBC00F4AEE6 /* CFNetwork.framework in Frameworks */,
+				B535261419E30CAB00F4AEE6 /* QuartzCore.framework in Frameworks */,
+				B535261219E30CA400F4AEE6 /* MobileCoreServices.framework in Frameworks */,
+				B535261019E30C9700F4AEE6 /* StoreKit.framework in Frameworks */,
+				B535260E19E30C8900F4AEE6 /* Security.framework in Frameworks */,
+				B535260C19E30C7C00F4AEE6 /* Foundation.framework in Frameworks */,
+				B535260A19E30C6E00F4AEE6 /* UIKit.framework in Frameworks */,
+				B535260719E30C3600F4AEE6 /* Parse.framework in Frameworks */,
+				B535260619E30C3600F4AEE6 /* Bolts.framework in Frameworks */,
+				B535260819E30C3600F4AEE6 /* ParseFacebookUtils.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,6 +120,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B535260219E30C3600F4AEE6 /* parse-library-1.4.1 */ = {
+			isa = PBXGroup;
+			children = (
+				B535260319E30C3600F4AEE6 /* Bolts.framework */,
+				B535260419E30C3600F4AEE6 /* Parse.framework */,
+				B535260519E30C3600F4AEE6 /* ParseFacebookUtils.framework */,
+			);
+			path = "parse-library-1.4.1";
+			sourceTree = "<group>";
+		};
 		B55AAE1D19C8F36D0009ED2F = {
 			isa = PBXGroup;
 			children = (
@@ -116,7 +166,12 @@
 				B5E39E4519D0EE87008C71CC /* DetailViewController.swift */,
 				B55AAE2F19C8F36D0009ED2F /* SecondViewController.swift */,
 				B55AAE3119C8F36D0009ED2F /* Main.storyboard */,
+				B53525FC19E30B7800F4AEE6 /* LoginViewController.h */,
+				B53525FF19E30BBD00F4AEE6 /* SignupViewController.h */,
+				B535260019E30BBD00F4AEE6 /* SignupViewController.m */,
+				B53525FD19E30B7800F4AEE6 /* LoginViewController.m */,
 				68A8CEC219DE181A0079EB14 /* Beer.swift */,
+				B535261919E30D8500F4AEE6 /* Parse.h */,
 				B55AAE3619C8F36D0009ED2F /* LaunchScreen.xib */,
 				B535256B19DC7AC200F4AEE6 /* Images.xcassets */,
 				B55AAE2919C8F36D0009ED2F /* Supporting Files */,
@@ -128,6 +183,15 @@
 		B55AAE2919C8F36D0009ED2F /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				B535261719E30CD300F4AEE6 /* SystemConfiguration.framework */,
+				B535261519E30CBC00F4AEE6 /* CFNetwork.framework */,
+				B535261319E30CAB00F4AEE6 /* QuartzCore.framework */,
+				B535261119E30CA400F4AEE6 /* MobileCoreServices.framework */,
+				B535260F19E30C9700F4AEE6 /* StoreKit.framework */,
+				B535260D19E30C8900F4AEE6 /* Security.framework */,
+				B535260B19E30C7C00F4AEE6 /* Foundation.framework */,
+				B535260919E30C6E00F4AEE6 /* UIKit.framework */,
+				B535260219E30C3600F4AEE6 /* parse-library-1.4.1 */,
 				B55AAE2A19C8F36D0009ED2F /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -252,6 +316,7 @@
 			files = (
 				B535256A19DC79E200F4AEE6 /* TableViewController.m in Sources */,
 				B5BE5EE819CCF0280041DF11 /* BeerData.swift in Sources */,
+				B53525FE19E30B7800F4AEE6 /* LoginViewController.m in Sources */,
 				B55AAE3019C8F36D0009ED2F /* SecondViewController.swift in Sources */,
 				B535256819DC79E200F4AEE6 /* BeerViewController.m in Sources */,
 				B55AAE2C19C8F36D0009ED2F /* AppDelegate.swift in Sources */,
@@ -261,6 +326,7 @@
 				B5E39E4819D1186D008C71CC /* Recommendations.swift in Sources */,
 				B535256719DC79E200F4AEE6 /* BeerRecommendation.m in Sources */,
 				B51E38D719CB6400003CA615 /* MasterViewController.swift in Sources */,
+				B535260119E30BBD00F4AEE6 /* SignupViewController.m in Sources */,
 				B55AAE2E19C8F36D0009ED2F /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -385,6 +451,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/beer-advisor/parse-library-1.4.1",
+				);
 				INFOPLIST_FILE = "beer-advisor/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -398,6 +468,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/beer-advisor/parse-library-1.4.1",
+				);
 				INFOPLIST_FILE = "beer-advisor/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
