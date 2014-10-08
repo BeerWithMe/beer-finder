@@ -78,7 +78,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Rate your beers!" id="kxi-88-TEI"/>
+                    <navigationItem key="navigationItem" title="Rate your beers!" id="kxi-88-TEI">
+                        <barButtonItem key="rightBarButtonItem" title="Log Out" id="D6u-4t-BkG">
+                            <connections>
+                                <action selector="logout:" destination="9pv-A4-QxB" id="9aW-d3-VLI"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="questionnaireImage" destination="5QP-mZ-EnU" id="bSk-iY-FEo"/>
                         <segue destination="HvY-xg-PCZ" kind="push" identifier="showLogin" id="1Pe-Sb-4FV"/>
@@ -86,7 +92,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o51-8t-dY5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1080" y="480"/>
+            <point key="canvasLocation" x="-462" y="-88"/>
         </scene>
         <!--main-view-->
         <scene sceneID="Upy-qX-51m">
@@ -104,7 +110,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Ei-QF-Fj4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="632" y="480"/>
+            <point key="canvasLocation" x="-912" y="-88"/>
         </scene>
         <!--Recommendations-->
         <scene sceneID="ENX-GK-G7S">
@@ -148,7 +154,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eaP-DE-D9v" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1526" y="480"/>
+            <point key="canvasLocation" x="-18" y="-88"/>
         </scene>
         <!--Beer View Controller-->
         <scene sceneID="b6o-3B-RIq">
@@ -199,11 +205,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7bV-BL-jum" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1969" y="480"/>
+            <point key="canvasLocation" x="425" y="-88"/>
         </scene>
         <!--Ribbit-->
         <scene sceneID="ui1-EY-7tq">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Oof-Jy-H4g" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="HvY-xg-PCZ" customClass="LoginViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="SnX-px-nrV"/>
@@ -257,13 +264,13 @@
                         <outlet property="usernameField" destination="WOi-xe-QsC" id="qzX-Ut-W5h"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Oof-Jy-H4g" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1080" y="-186"/>
+            <point key="canvasLocation" x="-18" y="-738"/>
         </scene>
         <!--Ribbit-->
         <scene sceneID="skT-99-OGr">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="O4H-y8-lLr" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="jsL-Wf-6z0" customClass="SignupViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="lE4-ia-4gN"/>
@@ -307,9 +314,8 @@
                         <outlet property="usernameField" destination="a6m-FU-TgN" id="yGZ-c5-q9F"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="O4H-y8-lLr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1526" y="-186"/>
+            <point key="canvasLocation" x="425" y="-738"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
