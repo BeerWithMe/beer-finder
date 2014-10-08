@@ -11,7 +11,7 @@ import UIKit
 class FirstViewController: UIViewController {
     
     var array : [Beer] = [
-        Beer(name: "Budweiser", imgUrl: "https://s3.amazonaws.com/brewerydbapi/beer/1P45iR/upl[ad_upBR4q-large.png", beernameInDB:"Anheuser-Busch InBev-Budweiser"),
+        Beer(name: "Budweiser", imgUrl: "https://s3.amazonaws.com/brewerydbapi/beer/1P45iR/upload_upBR4q-large.png", beernameInDB:"Anheuser-Busch InBev-Budweiser"),
         Beer(name: "Racer 5 IPA", imgUrl: "https://s3.amazonaws.com/brewerydbapi/beer/o1OELJ/upload_OutGJZ-large.png", beernameInDB:"Bear Republic Brewing Company-Racer 5 IPA"),
         Beer(name: "Anchor Steam", imgUrl: "https://s3.amazonaws.com/brewerydbapi/beer/Uiol9p/upload_drOw0u-large.png", beernameInDB:"Anchor Brewing Company-Anchor Steam"),
         Beer(name: "Guinness Draught", imgUrl: "https://s3.amazonaws.com/brewerydbapi/beer/StkEiv/upload_etArOb-large.png", beernameInDB:"Guinness-Guinness Draught"),
@@ -21,10 +21,6 @@ class FirstViewController: UIViewController {
     ]
     var arrayIndex = 0
     
-    
-    //array += [bud]
-    
-    //array.append(bud)
     
     //let beerData = BeerData()
     
@@ -44,6 +40,7 @@ class FirstViewController: UIViewController {
             self.cycleImage()
         } else {
             // go to the app
+            println("its over")
         }
     }
     
@@ -56,13 +53,13 @@ class FirstViewController: UIViewController {
     
     
     func cycleImage (){
-        questionnaireImage.image = array[arrayIndex].img
         arrayIndex++
+        questionnaireImage.image = array[arrayIndex].img
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        questionnaireImage.image = array[0].img
+        questionnaireImage.image = array[arrayIndex].img
 //        let beerData = BeerData()
 //        let url = NSURL(string: "http://localhost:3000/questionnaire")
 //        //let url = NSURL(string: beerData.url)
