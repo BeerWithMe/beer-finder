@@ -30,6 +30,7 @@
 		B535262219E31FE800F4AEE6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B535261E19E31FE800F4AEE6 /* CoreGraphics.framework */; };
 		B535262319E31FE800F4AEE6 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B535261F19E31FE800F4AEE6 /* CoreLocation.framework */; };
 		B535262419E31FE800F4AEE6 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B535262019E31FE800F4AEE6 /* libz.dylib */; };
+		B53526A119E5A29100F4AEE6 /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = B535269D19E5A29100F4AEE6 /* UIImage+ImageEffects.m */; };
 		B55AAE2C19C8F36D0009ED2F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55AAE2B19C8F36D0009ED2F /* AppDelegate.swift */; };
 		B55AAE2E19C8F36D0009ED2F /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55AAE2D19C8F36D0009ED2F /* FirstViewController.swift */; };
 		B55AAE3019C8F36D0009ED2F /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55AAE2F19C8F36D0009ED2F /* SecondViewController.swift */; };
@@ -83,6 +84,9 @@
 		B535261E19E31FE800F4AEE6 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		B535261F19E31FE800F4AEE6 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		B535262019E31FE800F4AEE6 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		B535269C19E5A29100F4AEE6 /* UIImage+ImageEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageEffects.h"; sourceTree = "<group>"; };
+		B535269D19E5A29100F4AEE6 /* UIImage+ImageEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageEffects.m"; sourceTree = "<group>"; };
+		B535269E19E5A29100F4AEE6 /* UIImageEffects-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageEffects-Prefix.pch"; sourceTree = "<group>"; };
 		B55AAE2619C8F36D0009ED2F /* beer-advisor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "beer-advisor.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B55AAE2A19C8F36D0009ED2F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B55AAE2B19C8F36D0009ED2F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -167,14 +171,17 @@
 				B51E38D619CB6400003CA615 /* MasterViewController.swift */,
 				B5E39E4519D0EE87008C71CC /* DetailViewController.swift */,
 				B55AAE2F19C8F36D0009ED2F /* SecondViewController.swift */,
-				B55AAE3119C8F36D0009ED2F /* Main.storyboard */,
 				B53525FC19E30B7800F4AEE6 /* LoginViewController.h */,
 				B53525FF19E30BBD00F4AEE6 /* SignupViewController.h */,
 				B535260019E30BBD00F4AEE6 /* SignupViewController.m */,
 				B53525FD19E30B7800F4AEE6 /* LoginViewController.m */,
 				68A8CEC219DE181A0079EB14 /* Beer.swift */,
 				B535261919E30D8500F4AEE6 /* Parse.h */,
+				B55AAE3119C8F36D0009ED2F /* Main.storyboard */,
 				B55AAE3619C8F36D0009ED2F /* LaunchScreen.xib */,
+				B535269C19E5A29100F4AEE6 /* UIImage+ImageEffects.h */,
+				B535269D19E5A29100F4AEE6 /* UIImage+ImageEffects.m */,
+				B535269E19E5A29100F4AEE6 /* UIImageEffects-Prefix.pch */,
 				B535256B19DC7AC200F4AEE6 /* Images.xcassets */,
 				B535255619D71D7200F4AEE6 /* beer-advisor-Bridging-Header.h */,
 				B55AAE2919C8F36D0009ED2F /* SupportingFiles */,
@@ -333,6 +340,7 @@
 				68A8CEC319DE181A0079EB14 /* Beer.swift in Sources */,
 				B5E39E4819D1186D008C71CC /* Recommendations.swift in Sources */,
 				B535256719DC79E200F4AEE6 /* BeerRecommendation.m in Sources */,
+				B53526A119E5A29100F4AEE6 /* UIImage+ImageEffects.m in Sources */,
 				B51E38D719CB6400003CA615 /* MasterViewController.swift in Sources */,
 				B535260119E30BBD00F4AEE6 /* SignupViewController.m in Sources */,
 				B55AAE2E19C8F36D0009ED2F /* FirstViewController.swift in Sources */,
