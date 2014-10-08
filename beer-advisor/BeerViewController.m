@@ -7,8 +7,11 @@
 
 #import "BeerViewController.h"
 #import "BeerRecommendation.h"
+#import "UIImage+ImageEffects.h"
 
 @interface BeerViewController ()
+@property (weak, nonatomic) IBOutlet UIImageView *backgroundImage;
+@property (weak, nonatomic) IBOutlet UILabel *beerName;
 
 @end
 
@@ -27,6 +30,13 @@
         UIImage *image = [UIImage imageWithData:imageData];
         self.beerViewImage.image = image;
     }
+    
+    UIImage *beerBackgroundImageSrc = [UIImage imageNamed:@"beer-background"];
+    UIImage *effectImage = [beerBackgroundImageSrc applyLightEffect];
+    
+    self.backgroundImage.image = effectImage;
+    
+    //self.beerName.text = @"Sup dude";
 
     // Do any additional setup after loading the view.
 }

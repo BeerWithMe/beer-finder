@@ -168,6 +168,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="e1U-hh-jIi">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="T8N-cV-Hrs">
                                 <rect key="frame" x="16" y="89" width="288" height="253"/>
                             </imageView>
@@ -177,8 +180,8 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="IBV" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bDt-6x-A9C">
-                                <rect key="frame" x="68" y="440" width="27" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ABV" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bDt-6x-A9C">
+                                <rect key="frame" x="68" y="440" width="34" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -195,12 +198,31 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="IBU" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bL4-2R-SQx">
+                                <rect key="frame" x="78" y="509" width="29" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="URL" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UKv-ak-CrW">
+                                <rect key="frame" x="159" y="509" width="34" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="QOq-nk-tHH"/>
                     <connections>
+                        <outlet property="backgroundImage" destination="e1U-hh-jIi" id="BYn-9q-HJk"/>
+                        <outlet property="beerABV" destination="bDt-6x-A9C" id="AzW-9c-aDc"/>
+                        <outlet property="beerDescription" destination="lbJ-rd-53U" id="fNX-Im-vPR"/>
+                        <outlet property="beerIBU" destination="bL4-2R-SQx" id="msZ-zf-Hbt"/>
+                        <outlet property="beerName" destination="uFF-RT-w3O" id="dg1-y9-ZNY"/>
                         <outlet property="beerViewImage" destination="T8N-cV-Hrs" id="eCB-77-2me"/>
+                        <outlet property="breweryName" destination="qt6-tT-TKn" id="NZl-oB-jXP"/>
+                        <outlet property="breweryWebsite" destination="UKv-ak-CrW" id="inE-dG-Rf5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7bV-BL-jum" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -210,7 +232,6 @@
         <!--Ribbit-->
         <scene sceneID="ui1-EY-7tq">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Oof-Jy-H4g" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="HvY-xg-PCZ" customClass="LoginViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="SnX-px-nrV"/>
@@ -264,13 +285,13 @@
                         <outlet property="usernameField" destination="WOi-xe-QsC" id="qzX-Ut-W5h"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Oof-Jy-H4g" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-18" y="-738"/>
         </scene>
         <!--Ribbit-->
         <scene sceneID="skT-99-OGr">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="O4H-y8-lLr" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="jsL-Wf-6z0" customClass="SignupViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="lE4-ia-4gN"/>
@@ -314,6 +335,7 @@
                         <outlet property="usernameField" destination="a6m-FU-TgN" id="yGZ-c5-q9F"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="O4H-y8-lLr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="425" y="-738"/>
         </scene>
