@@ -26,10 +26,13 @@
     self.tableView.tableHeaderView = headerView;
     
     //SERVER REQUEST
-    NSURL *beerQuestionnaireURL = [NSURL URLWithString:@"http://localhost:3000/questionnaire"];
+    NSURL *beerQuestionnaireURL = [NSURL URLWithString:@"http://localhost:3000/IOSrecommendations"];
+    //Possibly shift this to a POST request.
+    NSLog(@"worked");
     NSData *jsonData = [NSData dataWithContentsOfURL:beerQuestionnaireURL];
     NSError *error = nil;
-//    NSLog(@"\n jsonData %@\n", jsonData);
+    
+    NSLog(@"\n jsonData %@\n", jsonData);
     NSDictionary *dataDictionary = [NSJSONSerialization JSONObjectWithData:jsonData options:0 error:&error];
     
 //    NSLog(@"\n DATADICTIONARY %@\n",dataDictionary);
