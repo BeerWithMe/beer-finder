@@ -172,9 +172,9 @@
 				B5E39E4519D0EE87008C71CC /* DetailViewController.swift */,
 				B55AAE2F19C8F36D0009ED2F /* SecondViewController.swift */,
 				B53525FC19E30B7800F4AEE6 /* LoginViewController.h */,
+				B53525FD19E30B7800F4AEE6 /* LoginViewController.m */,
 				B53525FF19E30BBD00F4AEE6 /* SignupViewController.h */,
 				B535260019E30BBD00F4AEE6 /* SignupViewController.m */,
-				B53525FD19E30B7800F4AEE6 /* LoginViewController.m */,
 				68A8CEC219DE181A0079EB14 /* Beer.swift */,
 				B535261919E30D8500F4AEE6 /* Parse.h */,
 				B55AAE3119C8F36D0009ED2F /* Main.storyboard */,
@@ -467,6 +467,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/beer-advisor/parse-library-1.4.1",
@@ -484,6 +485,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/beer-advisor/parse-library-1.4.1",

@@ -19,21 +19,28 @@
     
     [super viewDidLoad];
     
-    
-    
     //This moves the table down so it doesn't go underneath the data at the top of the page.
     UIView *headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 20)];
     self.tableView.tableHeaderView = headerView;
     
-    //SERVER REQUEST
-    NSURL *beerQuestionnaireURL = [NSURL URLWithString:@"http://localhost:3000/questionnaire"];
-    NSData *jsonData = [NSData dataWithContentsOfURL:beerQuestionnaireURL];
-    NSError *error = nil;
-//    NSLog(@"\n jsonData %@\n", jsonData);
-    NSDictionary *dataDictionary = [NSJSONSerialization JSONObjectWithData:jsonData options:0 error:&error];
     
-//    NSLog(@"\n DATADICTIONARY %@\n",dataDictionary);
-    //THIS IS SUPER VALUABLE.  THIS IS HOW TO MAKE A GET REQUEST TO A SERVER.
+    ///////////////REFACTORED SERVER REQUEST//////////////////////////////// - need to further refactor to make asynchronous
+    NSURL * url = [NSURL URLWithString:@"http://localhost:3000/IOSrecommendations"];
+    NSMutableURLRequest * request = [NSMutableURLRequest requestWithURL:url];
+    [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+    [request setValue:@"test" forHTTPHeaderField:@"x-username"];
+    NSError * error = nil;
+    request.HTTPMethod = @"GET";
+    NSHTTPURLResponse *response = nil;
+    NSData *responseData = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
+    NSDictionary *dataDictionary = [NSJSONSerialization JSONObjectWithData:responseData options:0 error:&error];
+    
+    if (error == nil && response.statusCode == 200) {
+        NSLog(@"%li", (long)response.statusCode);
+        NSLog(@"response message: %@", dataDictionary);
+    } else {
+        NSLog(@"Error!!!!!!!!!!!!!!!!fjoasndfosaidnfaskn!!!!!!: %@", error);
+    }
 
     self.beerRecommendations = [NSMutableArray array];
     NSArray *beerRecommendationsArray = dataDictionary[@"posts"];
@@ -48,10 +55,6 @@
     
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
 #pragma mark - Table view data source
 
@@ -100,6 +103,7 @@
     }
     
 }
+
 
 
 

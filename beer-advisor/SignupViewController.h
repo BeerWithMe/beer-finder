@@ -13,6 +13,11 @@
 @property (weak, nonatomic) IBOutlet UITextField *usernameField;
 @property (weak, nonatomic) IBOutlet UITextField *passwordField;
 @property (weak, nonatomic) IBOutlet UITextField *emailField;
+@property (weak, nonatomic) NSString *username;
+@property (weak, nonatomic) NSString *password;
+@property (weak, nonatomic) NSString *email;
+@property (nonatomic) BOOL signUpCheck;
+
 
 - (IBAction)signup:(id)sender;
 
