@@ -27,9 +27,9 @@
     self.password = [self.passwordField.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
     self.email = [self.emailField.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
     
-    NSLog(@"username: %@", self.username);
-    NSLog(@"password: %@", self.password);
-    NSLog(@"email!!: %@", self.email);
+   // NSLog(@"username: %@", self.username);
+    //NSLog(@"password: %@", self.password);
+    //NSLog(@"email!!: %@", self.email);
     
     [self executePostCall];
     
@@ -61,7 +61,7 @@
 - (NSData *)executePostCall  {
     
     NSMutableDictionary *postDictionary = [[NSMutableDictionary alloc] initWithObjectsAndKeys:self.password, @"password", self.username, @"username", nil];
-    NSLog(@"my post dictionary: %@", postDictionary);
+    //NSLog(@"my post dictionary: %@", postDictionary);
     
     NSURL * url = [NSURL URLWithString:@"http://beerme.azurewebsites.net/IOSsignup"];
     NSMutableURLRequest * request = [NSMutableURLRequest requestWithURL:url];
@@ -80,11 +80,11 @@
     NSData *responseData = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
     if (error == nil && response.statusCode == 200) {
         self.signUpCheck = YES;
-        NSLog(@"%li", (long)response.statusCode);
-        NSLog(@"response message: %@", response);
+       // NSLog(@"%li", (long)response.statusCode);
+       // NSLog(@"response message: %@", response);
     } else {
         self.signUpCheck = NO;
-        NSLog(@"Error!!!!!!!!!!!!!!!!fjoasndfosaidnfaskn!!!!!!: %@", error);
+        //NSLog(@"Error!!!!!!!!!!!!!!!!fjoasndfosaidnfaskn!!!!!!: %@", error);
         UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Username already taken." message:[error.userInfo objectForKey:@"error"] delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
         [alertView show];
         //Display a message here

@@ -3,7 +3,7 @@
 //
 //  Created by Samuel Nelson on 9/25/14.
 //  Copyright (c) 2014 Treehouse. All rights reserved.
-//
+//not in here
 
 #import "TableViewController.h"
 #import "BeerRecommendation.h"
@@ -23,7 +23,6 @@
     UIView *headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 20)];
     self.tableView.tableHeaderView = headerView;
     
-    
     ///////////////REFACTORED SERVER REQUEST//////////////////////////////// - need to further refactor to make asynchronous
     NSURL * url = [NSURL URLWithString:@"http://localhost:3000/IOSrecommendations"];
     NSMutableURLRequest * request = [NSMutableURLRequest requestWithURL:url];
@@ -36,10 +35,10 @@
     NSDictionary *dataDictionary = [NSJSONSerialization JSONObjectWithData:responseData options:0 error:&error];
     
     if (error == nil && response.statusCode == 200) {
-        NSLog(@"%li", (long)response.statusCode);
-        NSLog(@"response message: %@", dataDictionary);
+       // NSLog(@"%li", (long)response.statusCode);
+        //NSLog(@"response message: %@", dataDictionary);
     } else {
-        NSLog(@"Error!!!!!!!!!!!!!!!!fjoasndfosaidnfaskn!!!!!!: %@", error);
+        //NSLog(@"Error!!!!!!!!!!!!!!!!fjoasndfosaidnfaskn!!!!!!: %@", error);
     }
 
     self.beerRecommendations = [NSMutableArray array];
@@ -93,7 +92,7 @@
 }
 
 -(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    NSLog(@"preparing for segue: %@", segue.identifier);
+    //NSLog(@"preparing for segue: %@", segue.identifier);
     
     if(([segue.identifier isEqualToString:@"showBeer"])) {
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];

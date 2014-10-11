@@ -9,9 +9,9 @@
 
 
 - (UIImage *)applyLightEffect
-{
-    UIColor *tintColor = [UIColor colorWithWhite:1.0 alpha:0.3];
-    return [self applyBlurWithRadius:30 tintColor:tintColor saturationDeltaFactor:1.8 maskImage:nil];
+{   //This is how you modify the blur intensity.
+    UIColor *tintColor = [UIColor colorWithWhite:1.0 alpha:0.2];
+    return [self applyBlurWithRadius:10 tintColor:tintColor saturationDeltaFactor:1.6 maskImage:nil];
 }
 
 

@@ -31,10 +31,10 @@
         self.beerViewImage.image = image;
     }
     
-    UIImage *beerBackgroundImageSrc = [UIImage imageNamed:@"beer-background"];
-    UIImage *effectImage = [beerBackgroundImageSrc applyLightEffect];
-    
-    self.backgroundImage.image = effectImage;
+    //UIImage *beerBackgroundImageSrc = [UIImage imageNamed:@"beer-background"];
+    //UIImage *effectImage = [beerBackgroundImageSrc applyLightEffect];
+    [self.backgroundImage.image applyLightEffect]; //Or apply this to the effectImage.
+    //The above three lines applies the blur effect.
     
     //self.beerName.text = @"Sup dude";
 

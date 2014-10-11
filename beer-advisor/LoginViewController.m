@@ -4,7 +4,7 @@
 //
 //  Created by Samuel Nelson on 10/3/14.
 //  Copyright (c) 2014 Treehouse. All rights reserved.
-//
+//not in here
 
 #import "LoginViewController.h"
 #import <Parse/Parse.h>
@@ -54,7 +54,7 @@
 - (NSData *)executePostCall  {
     
     NSMutableDictionary *postDictionary = [[NSMutableDictionary alloc] initWithObjectsAndKeys:self.password, @"password", self.username, @"username", nil];
-    NSLog(@"my post dictionary: %@", postDictionary);
+    //NSLog(@"my post dictionary: %@", postDictionary);
     
     NSURL * url = [NSURL URLWithString:@"http://beerme.azurewebsites.net/IOSlogin"];
     NSMutableURLRequest * request = [NSMutableURLRequest requestWithURL:url];
@@ -70,12 +70,12 @@
     NSData *responseData = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
     
     if (error == nil && response.statusCode == 200) {
-        NSLog(@"%li", (long)response.statusCode);
-        NSLog(@"response message: %@", response);
+      //  NSLog(@"%li", (long)response.statusCode);
+      //  NSLog(@"response message: %@", response);
         //[self.navigationController popToRootViewControllerAnimated:YES];
 
     } else {
-        NSLog(@"Error!!!!!!!!!!!!!!!!fjoasndfosaidnfaskn!!!!!!: %@", error);
+        //NSLog(@"Error!!!!!!!!!!!!!!!!fjoasndfosaidnfaskn!!!!!!: %@", error);
         UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Login failed" message:[error.userInfo objectForKey:@"error"] delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
         [alertView show];
     }
