@@ -76,6 +76,7 @@
     request.HTTPMethod = @"POST";
     
     NSHTTPURLResponse *response = nil;
+    
     NSData *responseData = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
     if (error == nil && response.statusCode == 200) {
         self.signUpCheck = YES;
