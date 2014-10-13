@@ -8,6 +8,7 @@
 #import "TableViewController.h"
 #import "BeerRecommendation.h"
 #import "BeerViewController.h"
+#import "Parse.h"
 
 @interface TableViewController ()
 
@@ -18,31 +19,32 @@
 - (void)viewDidLoad {
     
     [super viewDidLoad];
-    
+    NSLog(@"username: %@", [[PFUser currentUser] username]);
     //This moves the table down so it doesn't go underneath the data at the top of the page.
     UIView *headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 20)];
     self.tableView.tableHeaderView = headerView;
     
     ///////////////REFACTORED SERVER REQUEST//////////////////////////////// - need to further refactor to make asynchronous
-    NSURL * url = [NSURL URLWithString:@"http://localhost:3000/IOSrecommendations"];
+    NSURL * url = [NSURL URLWithString:@"http://localhost:3000/temp-test"];
     NSMutableURLRequest * request = [NSMutableURLRequest requestWithURL:url];
     [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
-    [request setValue:@"test" forHTTPHeaderField:@"x-username"];
+    [request setValue:(@"%@", [[PFUser currentUser] username]) forHTTPHeaderField:@"x-username"];
     NSError * error = nil;
     request.HTTPMethod = @"GET";
     NSHTTPURLResponse *response = nil;
-    NSData *responseData = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
+    NSData *responseData = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];//This shouldn't be on the main thread.  I need to come up with a solution. Make asynchronous.
     NSDictionary *dataDictionary = [NSJSONSerialization JSONObjectWithData:responseData options:0 error:&error];
-    
+    NSDictionary *headers = [response allHeaderFields];
+    NSLog(@"%@", headers);
     if (error == nil && response.statusCode == 200) {
-       // NSLog(@"%li", (long)response.statusCode);
-        //NSLog(@"response message: %@", dataDictionary);
+//        NSLog(@"%li", (long)response.statusCode);
+//        NSLog(@"response message: %@", dataDictionary);
     } else {
-        //NSLog(@"Error!!!!!!!!!!!!!!!!fjoasndfosaidnfaskn!!!!!!: %@", error);
+//        NSLog(@"Error!!!!!!!!!!!!!!!!fjoasndfosaidnfaskn!!!!!!: %@", error);
     }
 
     self.beerRecommendations = [NSMutableArray array];
-    NSArray *beerRecommendationsArray = dataDictionary[@"posts"];
+    NSArray *beerRecommendationsArray = dataDictionary[@"recommendations"];
     
     for(NSDictionary *beerRecommendationDictionary in beerRecommendationsArray) {
         BeerRecommendation *beerRecommendation = [BeerRecommendation beerRecommendationWithName:[beerRecommendationDictionary objectForKey:@"name"]];

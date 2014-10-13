@@ -69,11 +69,13 @@
     NSHTTPURLResponse *response = nil;
     NSData *responseData = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
     
-    if (error == nil && response.statusCode == 200) {
+    NSDictionary *headers = [response allHeaderFields];
+    NSLog(@"HEADERS!!!: %@", headers);
+    
+    if (error == nil && [headers[@"x-login-status"]  isEqual: @"SUCCESS"]) {  //I can't test this until it is deployed.  Test it then.
       //  NSLog(@"%li", (long)response.statusCode);
       //  NSLog(@"response message: %@", response);
         //[self.navigationController popToRootViewControllerAnimated:YES];
-
     } else {
         //NSLog(@"Error!!!!!!!!!!!!!!!!fjoasndfosaidnfaskn!!!!!!: %@", error);
         UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Login failed" message:[error.userInfo objectForKey:@"error"] delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
