@@ -17,9 +17,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="restaurant" translatesAutoresizingMaskIntoConstraints="NO" id="WF4-Wh-xd6">
-                                <rect key="frame" x="0.0" y="-6" width="320" height="574"/>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GHl-aJ-JFU">
                                 <rect key="frame" x="0.0" y="64" width="320" height="92"/>
                                 <color key="backgroundColor" red="0.54117647058823526" green="0.019607843137254902" blue="0.019607843137254902" alpha="0.70000000000000007" colorSpace="calibratedRGB"/>
@@ -27,13 +24,6 @@
                                     <constraint firstAttribute="height" constant="91.5" id="dOx-vQ-NfI"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="91.5" id="so2-vB-R1m"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MqS-sA-kPZ">
-                                <rect key="frame" x="65" y="410" width="203" height="27"/>
-                                <color key="backgroundColor" red="0.54117647058823526" green="0.019607843137254902" blue="0.019607843137254902" alpha="0.70000000000000007" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -63,20 +53,6 @@
                                     <constraint firstAttribute="height" constant="223" id="NdL-7T-CcJ"/>
                                 </constraints>
                             </imageView>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="CG4-xX-QFX">
-                                <rect key="frame" x="64" y="409" width="204" height="29"/>
-                                <segments>
-                                    <segment title="1"/>
-                                    <segment title="2"/>
-                                    <segment title="3"/>
-                                    <segment title="4"/>
-                                    <segment title="5"/>
-                                </segments>
-                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <connections>
-                                    <action selector="ratingsPicker:" destination="9pv-A4-QxB" eventType="valueChanged" id="HJG-3t-cgF"/>
-                                </connections>
-                            </segmentedControl>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Let's get to know you." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gfo-zX-G9s">
                                 <rect key="frame" x="67" y="72" width="186" height="37"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="19"/>
@@ -112,29 +88,46 @@
                                     <action selector="DontKnow:" destination="9pv-A4-QxB" eventType="touchUpInside" id="3YN-9U-vWx"/>
                                 </connections>
                             </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="CG4-xX-QFX">
+                                <rect key="frame" x="58" y="409" width="204" height="29"/>
+                                <color key="backgroundColor" red="0.54117647059999996" green="0.019607843140000001" blue="0.019607843140000001" alpha="0.69999999999999996" colorSpace="calibratedRGB"/>
+                                <segments>
+                                    <segment title="1"/>
+                                    <segment title="2"/>
+                                    <segment title="3"/>
+                                    <segment title="4"/>
+                                    <segment title="5"/>
+                                </segments>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="ratingsPicker:" destination="9pv-A4-QxB" eventType="valueChanged" id="HJG-3t-cgF"/>
+                                </connections>
+                            </segmentedControl>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="restaurant" translatesAutoresizingMaskIntoConstraints="NO" id="WF4-Wh-xd6">
+                                <rect key="frame" x="0.0" y="-6" width="320" height="574"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="Mij-Iz-c6Q" secondAttribute="trailing" constant="2" id="0hK-uC-WJP"/>
-                            <constraint firstItem="CG4-xX-QFX" firstAttribute="leading" secondItem="xqq-lr-xGb" secondAttribute="leadingMargin" constant="49" id="2IH-2I-5cC"/>
                             <constraint firstItem="WF4-Wh-xd6" firstAttribute="top" secondItem="xqq-lr-xGb" secondAttribute="topMargin" id="2pL-Fs-fLX"/>
                             <constraint firstItem="rvK-w5-S6N" firstAttribute="top" secondItem="CG4-xX-QFX" secondAttribute="bottom" constant="134" id="5MW-p2-YXb"/>
                             <constraint firstItem="Mij-Iz-c6Q" firstAttribute="width" secondItem="IMO-Rc-U8u" secondAttribute="width" id="76G-vN-a6n"/>
                             <constraint firstItem="Mij-Iz-c6Q" firstAttribute="height" secondItem="IMO-Rc-U8u" secondAttribute="height" id="8En-4q-XhP"/>
+                            <constraint firstItem="rvK-w5-S6N" firstAttribute="top" secondItem="CG4-xX-QFX" secondAttribute="bottom" constant="131" id="8Fo-oc-SIL"/>
                             <constraint firstItem="GHl-aJ-JFU" firstAttribute="top" secondItem="Qh5-kh-3tB" secondAttribute="bottom" id="BWL-54-Ov8"/>
-                            <constraint firstItem="CG4-xX-QFX" firstAttribute="height" secondItem="MqS-sA-kPZ" secondAttribute="height" id="Bfe-tx-L92"/>
                             <constraint firstItem="rvK-w5-S6N" firstAttribute="top" secondItem="5QP-mZ-EnU" secondAttribute="bottom" constant="175" id="CJf-Ih-S27"/>
                             <constraint firstItem="gfo-zX-G9s" firstAttribute="top" secondItem="Qh5-kh-3tB" secondAttribute="bottom" constant="8" id="GTa-bw-AU0"/>
-                            <constraint firstItem="CG4-xX-QFX" firstAttribute="width" secondItem="MqS-sA-kPZ" secondAttribute="width" id="JhN-Gz-E9G"/>
                             <constraint firstItem="WF4-Wh-xd6" firstAttribute="leading" secondItem="xqq-lr-xGb" secondAttribute="leadingMargin" constant="-16" id="KDK-vC-a1r"/>
-                            <constraint firstItem="WAb-cN-Gop" firstAttribute="leading" secondItem="xqq-lr-xGb" secondAttribute="leadingMargin" constant="81" id="QJ2-u8-5Oe"/>
+                            <constraint firstAttribute="centerX" secondItem="WAb-cN-Gop" secondAttribute="centerX" constant="-0.5" id="O0w-WY-3c2"/>
+                            <constraint firstAttribute="centerX" secondItem="WAb-cN-Gop" secondAttribute="centerX" constant="-0.5" id="Pxx-p0-65t"/>
                             <constraint firstItem="5QP-mZ-EnU" firstAttribute="leading" secondItem="xqq-lr-xGb" secondAttribute="leadingMargin" constant="13" id="T1u-wd-Qjl"/>
-                            <constraint firstItem="CG4-xX-QFX" firstAttribute="top" secondItem="Qh5-kh-3tB" secondAttribute="bottom" constant="342" id="TOf-mx-qYb"/>
                             <constraint firstItem="rvK-w5-S6N" firstAttribute="top" secondItem="WF4-Wh-xd6" secondAttribute="bottom" id="TlU-lI-f3E"/>
                             <constraint firstItem="Mij-Iz-c6Q" firstAttribute="leading" secondItem="IMO-Rc-U8u" secondAttribute="trailing" constant="35" id="Ure-nT-dgH"/>
+                            <constraint firstItem="CG4-xX-QFX" firstAttribute="width" secondItem="WAb-cN-Gop" secondAttribute="width" id="Xg3-51-cob"/>
+                            <constraint firstItem="WAb-cN-Gop" firstAttribute="top" secondItem="CG4-xX-QFX" secondAttribute="bottom" constant="14" id="Ze9-gb-YRV"/>
                             <constraint firstItem="GHl-aJ-JFU" firstAttribute="leading" secondItem="xqq-lr-xGb" secondAttribute="leadingMargin" constant="-16" id="Zqm-9j-Zyf"/>
                             <constraint firstAttribute="trailingMargin" secondItem="GHl-aJ-JFU" secondAttribute="trailing" constant="-16" id="a25-QP-HRE"/>
-                            <constraint firstItem="MqS-sA-kPZ" firstAttribute="bottom" secondItem="CG4-xX-QFX" secondAttribute="bottom" id="a3S-G2-kaz"/>
                             <constraint firstItem="Mij-Iz-c6Q" firstAttribute="top" secondItem="WAb-cN-Gop" secondAttribute="bottom" constant="8" id="c4Y-ax-TUK"/>
                             <constraint firstItem="5QP-mZ-EnU" firstAttribute="top" secondItem="GHl-aJ-JFU" secondAttribute="bottom" constant="14.5" id="dEK-LR-t0A"/>
                             <constraint firstAttribute="centerX" secondItem="cWA-Yx-ElB" secondAttribute="centerX" constant="-0.5" id="eIU-wi-Yb9"/>
@@ -147,11 +140,9 @@
                             <constraint firstItem="rvK-w5-S6N" firstAttribute="top" secondItem="GHl-aJ-JFU" secondAttribute="bottom" constant="412.5" id="qjf-uR-T5d"/>
                             <constraint firstAttribute="trailingMargin" secondItem="WF4-Wh-xd6" secondAttribute="trailing" constant="-16" id="r10-JQ-foT"/>
                             <constraint firstItem="IMO-Rc-U8u" firstAttribute="top" secondItem="WAb-cN-Gop" secondAttribute="bottom" constant="8" id="rsO-ug-xMH"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="CG4-xX-QFX" secondAttribute="trailing" constant="35" id="rzc-gX-xWv"/>
                             <constraint firstAttribute="trailingMargin" secondItem="WAb-cN-Gop" secondAttribute="trailing" constant="56" id="s4V-Ze-eOg"/>
                             <constraint firstItem="CG4-xX-QFX" firstAttribute="top" secondItem="5QP-mZ-EnU" secondAttribute="bottom" constant="13" id="tyu-AG-lzK"/>
-                            <constraint firstItem="WAb-cN-Gop" firstAttribute="top" secondItem="CG4-xX-QFX" secondAttribute="bottom" constant="14" id="vqZ-fA-VYo"/>
-                            <constraint firstItem="MqS-sA-kPZ" firstAttribute="leading" secondItem="CG4-xX-QFX" secondAttribute="leading" id="xHc-Xn-hcT"/>
+                            <constraint firstAttribute="centerX" secondItem="CG4-xX-QFX" secondAttribute="centerX" id="xZI-be-9GG"/>
                             <constraint firstItem="5QP-mZ-EnU" firstAttribute="top" secondItem="Qh5-kh-3tB" secondAttribute="bottom" constant="106" id="zZx-an-jfx"/>
                         </constraints>
                     </view>
