@@ -10,18 +10,30 @@
             <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="half-pint" translatesAutoresizingMaskIntoConstraints="NO" id="Zbv-HT-6zC">
-                    <rect key="frame" x="-106" y="-13" width="625" height="501"/>
-                </imageView>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="BeerMe" textAlignment="center" lineBreakMode="middleTruncation" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="kId-c2-rCX">
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BeerMe" textAlignment="center" lineBreakMode="middleTruncation" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="kId-c2-rCX">
                     <rect key="frame" x="0.0" y="191" width="480" height="113"/>
                     <color key="backgroundColor" red="0.54117647059999996" green="0.019607843140000001" blue="0.019607843140000001" alpha="0.69999999999999996" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="113" id="0PW-mo-D0o"/>
+                    </constraints>
                     <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="55"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="half-pint" translatesAutoresizingMaskIntoConstraints="NO" id="Zbv-HT-6zC">
+                    <rect key="frame" x="-106" y="-13" width="625" height="501"/>
+                </imageView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="centerY" secondItem="kId-c2-rCX" secondAttribute="centerY" constant="-7.5" id="CHQ-BB-m2Q"/>
+                <constraint firstItem="kId-c2-rCX" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Knx-Ar-PT3"/>
+                <constraint firstItem="Zbv-HT-6zC" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="-106" id="QV7-FE-oaN"/>
+                <constraint firstAttribute="trailing" secondItem="kId-c2-rCX" secondAttribute="trailing" id="SAc-V1-hPQ"/>
+                <constraint firstAttribute="bottom" secondItem="Zbv-HT-6zC" secondAttribute="bottom" constant="-8" id="cQa-fr-rnH"/>
+                <constraint firstItem="Zbv-HT-6zC" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="-13" id="eN4-av-yrE"/>
+                <constraint firstAttribute="trailing" secondItem="Zbv-HT-6zC" secondAttribute="trailing" constant="-39" id="rjY-bs-MJp"/>
+            </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="548" y="455"/>

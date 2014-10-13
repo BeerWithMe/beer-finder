@@ -17,6 +17,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="restaurant" translatesAutoresizingMaskIntoConstraints="NO" id="WF4-Wh-xd6">
+                                <rect key="frame" x="0.0" y="-6" width="320" height="574"/>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GHl-aJ-JFU">
                                 <rect key="frame" x="0.0" y="64" width="320" height="92"/>
                                 <color key="backgroundColor" red="0.54117647058823526" green="0.019607843137254902" blue="0.019607843137254902" alpha="0.70000000000000007" colorSpace="calibratedRGB"/>
@@ -103,9 +106,6 @@
                                     <action selector="ratingsPicker:" destination="9pv-A4-QxB" eventType="valueChanged" id="HJG-3t-cgF"/>
                                 </connections>
                             </segmentedControl>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="restaurant" translatesAutoresizingMaskIntoConstraints="NO" id="WF4-Wh-xd6">
-                                <rect key="frame" x="0.0" y="-6" width="320" height="574"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -224,6 +224,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Recommendations" id="P5B-Bm-QFc"/>
+                    <connections>
+                        <outlet property="backgroundImage" destination="6jO-8s-w6n" id="CMH-wO-pTI"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eaP-DE-D9v" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

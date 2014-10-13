@@ -9,8 +9,10 @@
 #import "BeerRecommendation.h"
 #import "BeerViewController.h"
 #import "Parse.h"
+#import "UIImage+ImageEffects.h"
 
 @interface TableViewController ()
+@property (weak, nonatomic) IBOutlet UIImageView *backgroundImage;
 
 @end
 
@@ -20,6 +22,9 @@
     
     [super viewDidLoad];
     NSLog(@"username: %@", [[PFUser currentUser] username]);
+    UIImage *beerBackgroundImageSrc = [UIImage imageNamed:@"restaurant"];
+    UIImage *effectImage = [beerBackgroundImageSrc applyLightEffect];
+    self.backgroundImage.image = effectImage; //Or apply this to the effectImage.
     //This moves the table down so it doesn't go underneath the data at the top of the page.
     UIView *headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 20)];
     self.tableView.tableHeaderView = headerView;
