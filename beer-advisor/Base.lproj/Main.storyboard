@@ -4,7 +4,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
     </dependencies>
     <scenes>
-        <!--Beer Finder-->
+        <!--BeerMe-->
         <scene sceneID="kv2-9H-tGl">
             <objects>
                 <viewController id="9pv-A4-QxB" customClass="FirstViewController" customModule="beer_advisor" customModuleProvider="target" sceneMemberID="viewController">
@@ -101,7 +101,7 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Beer Finder" id="kxi-88-TEI">
+                    <navigationItem key="navigationItem" title="BeerMe" id="kxi-88-TEI">
                         <barButtonItem key="rightBarButtonItem" title="Log Out" id="D6u-4t-BkG">
                             <connections>
                                 <action selector="logout:" destination="9pv-A4-QxB" id="9aW-d3-VLI"/>
@@ -110,7 +110,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="questionnaireImage" destination="5QP-mZ-EnU" id="bSk-iY-FEo"/>
-                        <segue destination="HvY-xg-PCZ" kind="push" identifier="showLogin" id="1Pe-Sb-4FV"/>
+                        <segue destination="HvY-xg-PCZ" kind="push" identifier="showLogin" id="X93-VA-DTv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o51-8t-dY5" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -120,6 +120,7 @@
         <!--main-view-->
         <scene sceneID="Upy-qX-51m">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7Ei-QF-Fj4" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController title="main-view" automaticallyAdjustsScrollViewInsets="NO" id="ahL-rY-gm1" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="SeN-BM-QlL">
@@ -131,7 +132,6 @@
                         <segue destination="9pv-A4-QxB" kind="relationship" relationship="rootViewController" id="6HG-pJ-GVB"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="7Ei-QF-Fj4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-912" y="-88"/>
         </scene>
@@ -253,10 +253,10 @@
             </objects>
             <point key="canvasLocation" x="425" y="-88"/>
         </scene>
-        <!--Ribbit-->
+        <!--Login-->
         <scene sceneID="ui1-EY-7tq">
             <objects>
-                <viewController id="HvY-xg-PCZ" customClass="LoginViewController" sceneMemberID="viewController">
+                <viewController title="Login" id="HvY-xg-PCZ" customClass="LoginViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="SnX-px-nrV"/>
                         <viewControllerLayoutGuide type="bottom" id="CCG-Ii-WEH"/>
@@ -265,6 +265,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="restaurant" translatesAutoresizingMaskIntoConstraints="NO" id="KuF-Ga-hW8">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WOi-xe-QsC">
                                 <rect key="frame" x="16" y="74" width="288" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -291,7 +294,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="jsL-Wf-6z0" kind="push" id="Fnl-Ga-vSa"/>
+                                    <segue destination="jsL-Wf-6z0" kind="push" id="zbl-kj-t7I"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Don't have an account?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jbM-2k-mqO">
@@ -303,8 +306,9 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Ribbit" id="kSD-uz-MOi"/>
+                    <navigationItem key="navigationItem" title="Login" id="kSD-uz-MOi"/>
                     <connections>
+                        <outlet property="backgroundImage" destination="KuF-Ga-hW8" id="Kxe-Nm-MBu"/>
                         <outlet property="passwordField" destination="f7C-Xc-6Pb" id="IUn-86-8sq"/>
                         <outlet property="usernameField" destination="WOi-xe-QsC" id="qzX-Ut-W5h"/>
                     </connections>
@@ -313,10 +317,10 @@
             </objects>
             <point key="canvasLocation" x="-18" y="-738"/>
         </scene>
-        <!--Ribbit-->
+        <!--Signup-->
         <scene sceneID="skT-99-OGr">
             <objects>
-                <viewController id="jsL-Wf-6z0" customClass="SignupViewController" sceneMemberID="viewController">
+                <viewController title="Signup" id="jsL-Wf-6z0" customClass="SignupViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="lE4-ia-4gN"/>
                         <viewControllerLayoutGuide type="bottom" id="F09-MP-mHL"/>
@@ -325,18 +329,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="restaurant" translatesAutoresizingMaskIntoConstraints="NO" id="uwi-6R-4vZ">
+                                <rect key="frame" x="-6" y="0.0" width="332" height="585"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Already have an account?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JTJ-rg-Zul">
+                                <rect key="frame" x="16" y="231" width="199" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="a6m-FU-TgN">
-                                <rect key="frame" x="16" y="74" width="288" height="30"/>
+                                <rect key="frame" x="16" y="72" width="288" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fIc-7J-cJM">
-                                <rect key="frame" x="16" y="112" width="288" height="30"/>
+                                <rect key="frame" x="16" y="110" width="288" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email Address" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rxf-PY-i0W">
-                                <rect key="frame" x="16" y="150" width="288" height="30"/>
+                                <rect key="frame" x="16" y="148" width="288" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                             </textField>
@@ -349,11 +362,22 @@
                                     <action selector="signup:" destination="jsL-Wf-6z0" eventType="touchUpInside" id="Bgj-4S-V39"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tz8-1s-Fq6">
+                                <rect key="frame" x="224" y="225" width="62" height="33"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Login">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="HvY-xg-PCZ" kind="push" id="fDY-qL-dkl"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Ribbit" id="hRU-TB-s2t"/>
+                    <navigationItem key="navigationItem" title="Signup" id="hRU-TB-s2t"/>
                     <connections>
+                        <outlet property="backgroundImage" destination="uwi-6R-4vZ" id="gk1-T6-gAi"/>
                         <outlet property="emailField" destination="rxf-PY-i0W" id="fxY-UW-3dY"/>
                         <outlet property="passwordField" destination="fIc-7J-cJM" id="A75-DZ-AH9"/>
                         <outlet property="usernameField" destination="a6m-FU-TgN" id="yGZ-c5-q9F"/>
@@ -373,5 +397,8 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="X93-VA-DTv"/>
+    </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.54117647059999996" green="0.019607843140000001" blue="0.019607843140000001" alpha="0.69999999999999996" colorSpace="calibratedRGB"/>
 </document>

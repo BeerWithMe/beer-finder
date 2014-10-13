@@ -8,8 +8,10 @@
 
 #import "LoginViewController.h"
 #import <Parse/Parse.h>
+#import "UIImage+ImageEffects.h"
 
 @interface LoginViewController ()
+@property (weak, nonatomic) IBOutlet UIImageView *backgroundImage;
 
 @end
 
@@ -18,6 +20,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.navigationItem.hidesBackButton = YES;
+    [self.navigationController setNavigationBarHidden:YES animated:NO];
+    UIImage *beerBackgroundImageSrc = [UIImage imageNamed:@"restaurant"];
+    UIImage *effectImage = [beerBackgroundImageSrc applyLightEffect];
+    self.backgroundImage.image = effectImage; //Or apply this to the effectImage.
+    
 }
 
 - (IBAction)login:(id)sender {

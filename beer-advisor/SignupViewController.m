@@ -8,8 +8,10 @@
 
 #import "SignupViewController.h"
 #import <Parse/Parse.h>
+#import "UIImage+ImageEffects.h"
 
 @interface SignupViewController ()
+@property (weak, nonatomic) IBOutlet UIImageView *backgroundImage;
 
 @end
 
@@ -18,6 +20,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.navigationItem.hidesBackButton = NO;
+    UIImage *beerBackgroundImageSrc = [UIImage imageNamed:@"restaurant"];
+    UIImage *effectImage = [beerBackgroundImageSrc applyLightEffect];
+    self.backgroundImage.image = effectImage; //Or apply this to the effectImage.
+    
 
     // Do any additional setup after loading the view.
 }
