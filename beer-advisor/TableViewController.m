@@ -21,10 +21,21 @@
 - (void)viewDidLoad {
     
     [super viewDidLoad];
+    
+//    self.navigationController.view.backgroundColor =
+//    [UIColor colorWithPatternImage:[UIImage imageNamed:@"restaurant"]];
+    self.tableView.backgroundColor = [UIColor clearColor];
+    self.tableView.backgroundView = nil;
+    
+    UIImageView *imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"half-pint"]];
+    [imageView setFrame:self.tableView.frame];
+    [imageView setContentMode:UIViewContentModeScaleAspectFill];
+    self.tableView.backgroundView = imageView;
+
     NSLog(@"username: %@", [[PFUser currentUser] username]);
-    UIImage *beerBackgroundImageSrc = [UIImage imageNamed:@"restaurant"];
-    UIImage *effectImage = [beerBackgroundImageSrc applyLightEffect];
-    self.backgroundImage.image = effectImage; //Or apply this to the effectImage.
+//    UIImage *beerBackgroundImageSrc = [UIImage imageNamed:@"restaurant"];
+//    UIImage *effectImage = [beerBackgroundImageSrc applyLightEffect];
+//    self.backgroundImage.image = effectImage; //Or apply this to the effectImage.
     //This moves the table down so it doesn't go underneath the data at the top of the page.
     UIView *headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 20)];
     self.tableView.tableHeaderView = headerView;

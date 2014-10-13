@@ -188,31 +188,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                        <imageView key="tableFooterView" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="restaurant" id="6jO-8s-w6n">
-                            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        </imageView>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Cell" textLabel="dHT-yi-Gdz" detailTextLabel="CUV-kG-6Q8" style="IBUITableViewCellStyleSubtitle" id="XPk-FD-u4C">
+                            <tableViewCell opaque="NO" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Cell" textLabel="dHT-yi-Gdz" detailTextLabel="CUV-kG-6Q8" style="IBUITableViewCellStyleSubtitle" id="XPk-FD-u4C">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="XPk-FD-u4C" id="wgR-zw-hxa">
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="dHT-yi-Gdz">
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="16"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="CUV-kG-6Q8">
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="11"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
-                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.54117647059999996" green="0.019607843140000001" blue="0.019607843140000001" alpha="0.5" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <segue destination="E2h-ft-wFv" kind="push" identifier="showBeer" id="aiy-TP-O66"/>
                                 </connections>
@@ -224,9 +221,6 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Recommendations" id="P5B-Bm-QFc"/>
-                    <connections>
-                        <outlet property="backgroundImage" destination="6jO-8s-w6n" id="CMH-wO-pTI"/>
-                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eaP-DE-D9v" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -496,7 +490,7 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="fDY-qL-dkl"/>
+        <segue reference="X93-VA-DTv"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.54117647059999996" green="0.019607843140000001" blue="0.019607843140000001" alpha="0.69999999999999996" colorSpace="calibratedRGB"/>
 </document>
