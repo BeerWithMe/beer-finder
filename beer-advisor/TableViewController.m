@@ -21,6 +21,8 @@
 - (void)viewDidLoad {
     
     [super viewDidLoad];
+    [self.navigationController setNavigationBarHidden:NO];
+    self.navigationItem.hidesBackButton = YES;
     
 //    self.navigationController.view.backgroundColor =
 //    [UIColor colorWithPatternImage:[UIImage imageNamed:@"restaurant"]];
@@ -70,6 +72,11 @@
         [self.beerRecommendations addObject:beerRecommendation];
     }
     
+}
+
+- (IBAction)logOut:(id)sender {
+    [PFUser logOut];
+    [self performSegueWithIdentifier:@"showLogin" sender:self];
 }
 
 

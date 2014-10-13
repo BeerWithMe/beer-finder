@@ -146,13 +146,7 @@
                             <constraint firstItem="5QP-mZ-EnU" firstAttribute="top" secondItem="Qh5-kh-3tB" secondAttribute="bottom" constant="106" id="zZx-an-jfx"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="BeerMe" id="kxi-88-TEI">
-                        <barButtonItem key="rightBarButtonItem" title="Log Out" id="D6u-4t-BkG">
-                            <connections>
-                                <action selector="logout:" destination="9pv-A4-QxB" id="9aW-d3-VLI"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="BeerMe" id="kxi-88-TEI"/>
                     <connections>
                         <outlet property="questionnaireImage" destination="5QP-mZ-EnU" id="bSk-iY-FEo"/>
                         <segue destination="HvY-xg-PCZ" kind="push" identifier="showLogin" id="X93-VA-DTv"/>
@@ -220,7 +214,14 @@
                             <outlet property="delegate" destination="K3S-xN-zr1" id="G4F-4F-nNv"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Recommendations" id="P5B-Bm-QFc"/>
+                    <navigationItem key="navigationItem" title="Recommendations" id="P5B-Bm-QFc">
+                        <barButtonItem key="rightBarButtonItem" title="Log Out" id="HgB-Lw-1b3">
+                            <connections>
+                                <action selector="logOut:" destination="K3S-xN-zr1" id="3F3-f5-cCd"/>
+                                <segue destination="HvY-xg-PCZ" kind="push" identifier="showLogin" id="xzc-Ir-WUz"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eaP-DE-D9v" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -490,7 +491,7 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="X93-VA-DTv"/>
+        <segue reference="xzc-Ir-WUz"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.54117647059999996" green="0.019607843140000001" blue="0.019607843140000001" alpha="0.69999999999999996" colorSpace="calibratedRGB"/>
 </document>
