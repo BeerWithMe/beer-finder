@@ -68,7 +68,7 @@ class FirstViewController: UIViewController {
         super.viewDidLoad()
         questionnaireImage.image = array[arrayIndex].img
         var currentUser = PFUser()
-        self.navigationController?.setNavigationBarHidden(true, animated: false)
+        //self.navigationController?.setNavigationBarHidden(true, animated: false)
         
         //var currentUser: PFUser = PFUser.currentUser()
         if (PFUser.currentUser() != nil) {
