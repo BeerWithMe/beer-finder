@@ -15,6 +15,9 @@
         self.name = name;
         self.brewery = nil;
         self.thumbnail = nil;
+        self.abv = nil;
+        self.ibu = nil;
+        self.url = nil;
     }
     return self;
 }

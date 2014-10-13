@@ -12,6 +12,10 @@
 @property (nonatomic, strong) NSString *name;
 @property (nonatomic, strong) NSString *brewery;
 @property (nonatomic, strong) NSString *thumbnail;
+@property (nonatomic, strong) NSString *abv;
+@property (nonatomic, strong) NSString *ibu;
+@property (nonatomic, strong) NSString *url;
+@property (nonatomic, strong) NSString *beerDescription;
 
 //Designated Initializer
 -(id) initWithName:(NSString *)name;
