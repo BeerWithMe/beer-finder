@@ -4,12 +4,14 @@
 //
 //  Created by Samuel Nelson on 10/3/14.
 //  Copyright (c) 2014 Treehouse. All rights reserved.
-//
+//not in here
 
 #import "LoginViewController.h"
 #import <Parse/Parse.h>
+#import "UIImage+ImageEffects.h"
 
 @interface LoginViewController ()
+@property (weak, nonatomic) IBOutlet UIImageView *backgroundImage;
 
 @end
 
@@ -18,6 +20,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.navigationItem.hidesBackButton = YES;
+    [self.navigationController setNavigationBarHidden:YES animated:NO];
+    UIImage *beerBackgroundImageSrc = [UIImage imageNamed:@"restaurant"];
+    UIImage *effectImage = [beerBackgroundImageSrc applyLightEffect];
+    self.backgroundImage.image = effectImage; //Or apply this to the effectImage.
+    
 }
 
 - (IBAction)login:(id)sender {
@@ -54,7 +61,7 @@
 - (NSData *)executePostCall  {
     
     NSMutableDictionary *postDictionary = [[NSMutableDictionary alloc] initWithObjectsAndKeys:self.password, @"password", self.username, @"username", nil];
-    NSLog(@"my post dictionary: %@", postDictionary);
+    //NSLog(@"my post dictionary: %@", postDictionary);
     
     NSURL * url = [NSURL URLWithString:@"http://beerme.azurewebsites.net/IOSlogin"];
     NSMutableURLRequest * request = [NSMutableURLRequest requestWithURL:url];
@@ -69,13 +76,15 @@
     NSHTTPURLResponse *response = nil;
     NSData *responseData = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
     
-    if (error == nil && response.statusCode == 200) {
-        NSLog(@"%li", (long)response.statusCode);
-        NSLog(@"response message: %@", response);
+    NSDictionary *headers = [response allHeaderFields];
+    NSLog(@"HEADERS!!!: %@", headers);
+    
+    if (error == nil && [headers[@"x-login-status"]  isEqual: @"SUCCESS"]) {  //I can't test this until it is deployed.  Test it then.
+      //  NSLog(@"%li", (long)response.statusCode);
+      //  NSLog(@"response message: %@", response);
         //[self.navigationController popToRootViewControllerAnimated:YES];
-
     } else {
-        NSLog(@"Error!!!!!!!!!!!!!!!!fjoasndfosaidnfaskn!!!!!!: %@", error);
+        //NSLog(@"Error!!!!!!!!!!!!!!!!fjoasndfosaidnfaskn!!!!!!: %@", error);
         UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Login failed" message:[error.userInfo objectForKey:@"error"] delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
         [alertView show];
     }

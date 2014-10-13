@@ -3,13 +3,16 @@
 //
 //  Created by Samuel Nelson on 9/25/14.
 //  Copyright (c) 2014 Treehouse. All rights reserved.
-//
+//not in here
 
 #import "TableViewController.h"
 #import "BeerRecommendation.h"
 #import "BeerViewController.h"
+#import "Parse.h"
+#import "UIImage+ImageEffects.h"
 
 @interface TableViewController ()
+@property (weak, nonatomic) IBOutlet UIImageView *backgroundImage;
 
 @end
 
@@ -19,31 +22,45 @@
     
     [super viewDidLoad];
     
+//    self.navigationController.view.backgroundColor =
+//    [UIColor colorWithPatternImage:[UIImage imageNamed:@"restaurant"]];
+    self.tableView.backgroundColor = [UIColor clearColor];
+    self.tableView.backgroundView = nil;
+    
+    UIImageView *imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"half-pint"]];
+    [imageView setFrame:self.tableView.frame];
+    [imageView setContentMode:UIViewContentModeScaleAspectFill];
+    self.tableView.backgroundView = imageView;
+
+    NSLog(@"username: %@", [[PFUser currentUser] username]);
+//    UIImage *beerBackgroundImageSrc = [UIImage imageNamed:@"restaurant"];
+//    UIImage *effectImage = [beerBackgroundImageSrc applyLightEffect];
+//    self.backgroundImage.image = effectImage; //Or apply this to the effectImage.
     //This moves the table down so it doesn't go underneath the data at the top of the page.
     UIView *headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 20)];
     self.tableView.tableHeaderView = headerView;
     
-    
     ///////////////REFACTORED SERVER REQUEST//////////////////////////////// - need to further refactor to make asynchronous
-    NSURL * url = [NSURL URLWithString:@"http://localhost:3000/IOSrecommendations"];
+    NSURL * url = [NSURL URLWithString:@"http://localhost:3000/temp-test"];
     NSMutableURLRequest * request = [NSMutableURLRequest requestWithURL:url];
     [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
-    [request setValue:@"test" forHTTPHeaderField:@"x-username"];
+    [request setValue:(@"%@", [[PFUser currentUser] username]) forHTTPHeaderField:@"x-username"];
     NSError * error = nil;
     request.HTTPMethod = @"GET";
     NSHTTPURLResponse *response = nil;
-    NSData *responseData = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
+    NSData *responseData = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];//This shouldn't be on the main thread.  I need to come up with a solution. Make asynchronous.
     NSDictionary *dataDictionary = [NSJSONSerialization JSONObjectWithData:responseData options:0 error:&error];
-    
+    NSDictionary *headers = [response allHeaderFields];
+    NSLog(@"%@", headers);
     if (error == nil && response.statusCode == 200) {
-        NSLog(@"%li", (long)response.statusCode);
-        NSLog(@"response message: %@", dataDictionary);
+//        NSLog(@"%li", (long)response.statusCode);
+//        NSLog(@"response message: %@", dataDictionary);
     } else {
-        NSLog(@"Error!!!!!!!!!!!!!!!!fjoasndfosaidnfaskn!!!!!!: %@", error);
+//        NSLog(@"Error!!!!!!!!!!!!!!!!fjoasndfosaidnfaskn!!!!!!: %@", error);
     }
 
     self.beerRecommendations = [NSMutableArray array];
-    NSArray *beerRecommendationsArray = dataDictionary[@"posts"];
+    NSArray *beerRecommendationsArray = dataDictionary[@"recommendations"];
     
     for(NSDictionary *beerRecommendationDictionary in beerRecommendationsArray) {
         BeerRecommendation *beerRecommendation = [BeerRecommendation beerRecommendationWithName:[beerRecommendationDictionary objectForKey:@"name"]];
@@ -93,7 +110,7 @@
 }
 
 -(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    NSLog(@"preparing for segue: %@", segue.identifier);
+    //NSLog(@"preparing for segue: %@", segue.identifier);
     
     if(([segue.identifier isEqualToString:@"showBeer"])) {
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
