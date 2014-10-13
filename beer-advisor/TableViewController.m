@@ -21,6 +21,8 @@
 - (void)viewDidLoad {
     
     [super viewDidLoad];
+    [self.navigationController setNavigationBarHidden:NO];
+    self.navigationItem.hidesBackButton = YES;
     
 //    self.navigationController.view.backgroundColor =
 //    [UIColor colorWithPatternImage:[UIImage imageNamed:@"restaurant"]];
@@ -66,10 +68,19 @@
         BeerRecommendation *beerRecommendation = [BeerRecommendation beerRecommendationWithName:[beerRecommendationDictionary objectForKey:@"name"]];
         beerRecommendation.brewery = [beerRecommendationDictionary objectForKey:@"brewery"];
         beerRecommendation.thumbnail = [beerRecommendationDictionary objectForKey:@"imgUrl"];
+        beerRecommendation.beerDescription = [beerRecommendationDictionary objectForKey:@"description"];
+        beerRecommendation.abv = [beerRecommendationDictionary objectForKey:@"abv"];
+        beerRecommendation.ibu = [beerRecommendationDictionary objectForKey:@"ibu"];
+        beerRecommendation.url = [beerRecommendationDictionary objectForKey:@"url"];
 
         [self.beerRecommendations addObject:beerRecommendation];
     }
     
+}
+
+- (IBAction)logOut:(id)sender {
+    [PFUser logOut];
+    [self performSegueWithIdentifier:@"showLogin" sender:self];
 }
 
 
@@ -115,8 +126,16 @@
     if(([segue.identifier isEqualToString:@"showBeer"])) {
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
         BeerRecommendation *beerRecommendation = [self.beerRecommendations objectAtIndex:indexPath.row];
-
+        NSLog(@"BEER OBJECT: %@", beerRecommendation.beerDescription);
+                [segue.destinationViewController setBeerName: beerRecommendation.name];
         [segue.destinationViewController setImageURL: beerRecommendation.thumbnailURL];
+        [segue.destinationViewController setBreweryName: beerRecommendation.brewery];
+        [segue.destinationViewController setBeerABV: beerRecommendation.abv];
+        [segue.destinationViewController setBreweryWebsite: beerRecommendation.url];
+        [segue.destinationViewController setBeerDescription: beerRecommendation.beerDescription];
+        [segue.destinationViewController setBeerIBU: beerRecommendation.ibu];
+
+        
     }
     
 }

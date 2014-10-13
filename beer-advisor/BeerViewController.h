@@ -10,12 +10,13 @@
 @interface BeerViewController : UIViewController
 
 @property (strong, nonatomic) NSURL *imageURL;
-@property (strong, nonatomic) IBOutlet UIImageView *beerViewImage;
-@property (weak, nonatomic) IBOutlet UILabel *breweryName;
-@property (weak, nonatomic) IBOutlet UILabel *beerABV;
-@property (weak, nonatomic) IBOutlet UILabel *breweryWebsite;
-@property (weak, nonatomic) IBOutlet UILabel *beerDescription;
-@property (weak, nonatomic) IBOutlet UILabel *beerIBU;
+@property (strong, nonatomic) UIImageView *beerViewImage;
+@property (strong, nonatomic) NSString *breweryName;
+@property (strong, nonatomic) NSString *beerABV;
+@property (strong, nonatomic) NSString *breweryWebsite;
+@property (strong, nonatomic) NSString *beerDescription;
+@property (strong, nonatomic) NSString *beerIBU;
+@property (strong, nonatomic) NSString *beerName;
 
 
 @end
